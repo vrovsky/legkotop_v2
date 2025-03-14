@@ -3,7 +3,7 @@ import React from "react";
 export default function Header() {
   return (
     <>
-      <div class="text-xl font-bold p-2">Legko_top</div>;
+      <div className="text-2xl font-bold ml-10 p-4">Legko_Top</div>;
     </>
   );
 }

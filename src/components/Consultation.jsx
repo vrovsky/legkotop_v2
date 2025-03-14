@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Consultation() {
-  return <div>Консултация</div>;
+  return <div className="text-4xl">Консултация</div>;
 }
