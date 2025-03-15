@@ -5,7 +5,7 @@ const courses = [
   {
     title: 'Курс для родителей "Коррекция асимметрий у детей"',
     content: (
-      <div className="space-y-4 pl-10 text-2xl">
+      <div className="space-y-4 px-10 text-2xl">
         <p>
           Вам нужен этот курс, если вы видите, что у ребенка были и/или есть:
         </p>
@@ -57,7 +57,7 @@ const courses = [
   {
     title: 'Курс для родителей "Сажать нельзя ждать"',
     content: (
-      <div className="space-y-4 text-2xl pl-10">
+      <div className="space-y-4 text-2xl px-10">
         <p>
           Курс состоит из <strong>теоретического вебинара</strong>, видео с
           реальными младенцами, практики и упражнений для самостоятельного
@@ -105,7 +105,7 @@ const courses = [
   {
     title: 'Курс для родителей "Хендлинг 0-3 месяца"',
     content: (
-      <div className="space-y-4 text-2xl pl-10">
+      <div className="space-y-4 text-2xl px-10">
         <p>
           Хотите научиться безопасно и комфортно носить ребенка на руках,
           успокаивать его без слез, позаботиться о его здоровье и своевременном
@@ -133,7 +133,7 @@ const courses = [
     title:
       'Курс для специалистов "Основы хендлинга и двигательной терапии для детей"',
     content: (
-      <div className="space-y-4 text-2xl pl-10">
+      <div className="space-y-4 text-2xl px-10">
         <p className="font-semibold">Поздравляю, меня зовут Татьяна Труба!</p>
         <p>
           Приглашаю на авторский курс{" "}
@@ -194,7 +194,7 @@ export default function Courses() {
   };
   return (
     <div className="flex flex-col mx-auto my-20">
-      <div className="text-4xl font-bold pb-6 pl-8 pt-6">Курсы</div>
+      <div className="text-4xl font-bold pb-6 px-8 pt-6">Курсы</div>
       {courses.map((course, index) => (
         <div key={index} className="">
           <button

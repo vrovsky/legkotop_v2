@@ -6,11 +6,11 @@ export default function Intro() {
     <div>
       <div className="flex">
         <div className="w-1/2 flex flex-col justify-center p-8">
-          <div className="text-lg font-semibold">
+          <div className="text-5xl font-semibold">
             Все о психомоторном развитии детей от рождения до первых шагов для
             родителей и специалистов
           </div>
-          <div className="mt-4">
+          <div className="mt-4 text-3xl">
             Помогите ребенку активно и симметрично двигаться в первый год жизни,
             чтобы обеспечить ему хорошую осанку в будущем
           </div>
@@ -19,7 +19,7 @@ export default function Intro() {
           <img src={myImage} alt="Your Image" />
         </div>
       </div>
-      <div className="flex justify-center text-lg">
+      <div className="flex justify-center text-3xl">
         Авторская методика Татьяны Трубы
       </div>
     </div>
