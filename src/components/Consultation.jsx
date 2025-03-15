@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Consultation() {
   return (
@@ -54,11 +55,12 @@ export default function Consultation() {
         </p>
       </div>
 
-      <div className="flex justify-center">
-        <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold my-4 py-4 px-30 rounded-lg transition-all text-lg shadow-md">
-          Хочу узнать подробнее
-        </button>
-      </div>
+      <Link
+        to="/consultation"
+        className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold my-4 py-4 px-8 rounded-lg transition-all text-lg shadow-md"
+      >
+        Хочу узнать подробнее
+      </Link>
     </div>
   );
 }

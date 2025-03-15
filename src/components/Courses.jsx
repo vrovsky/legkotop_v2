@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const courses = [
   {
@@ -89,14 +90,15 @@ const courses = [
           <strong>от меня лично</strong>.
         </p>
         <div className="pt-4">
-          <a
-            href="https://example.com/payment-link2"
-            target="_blank"
+          <Link
+            to="/consultation"
+            // href="https://example.com/payment-link2"
+            // target="_blank"
             rel="noopener noreferrer"
             className="block w-2xl text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-4 rounded-lg transition-all"
           >
             Хочу на курс!
-          </a>
+          </Link>
         </div>
       </div>
     ),
