@@ -1,9 +1,9 @@
 import React from "react";
-import myImage from "../assets/your-image.jpg";
+import introPic from "../assets/introPic.png";
 
 export default function Intro() {
   return (
-    <div>
+    <div className="bg-[#F2BB03]">
       <div className="flex">
         <div className="w-1/2 flex flex-col justify-center py-20 px-30">
           <div className="text-5xl font-semibold">
@@ -16,8 +16,8 @@ export default function Intro() {
           </div>
           <div className="pt-4 text-3xl">Авторская методика Татьяны Трубы</div>
         </div>
-        <div className="w-1/2 bg-cover bg-center p-20">
-          <img src={myImage} alt="Your Image" />
+        <div className="bg-cover bg-center w-1/3">
+          <img src={introPic} alt="Intro Pic" />
         </div>
       </div>
     </div>

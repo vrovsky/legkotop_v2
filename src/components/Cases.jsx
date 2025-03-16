@@ -32,8 +32,8 @@ export default function Cases() {
   };
 
   return (
-    <div className="w-full h-auto p-4 overflow-hidden">
-      <h2 className="text-4xl font-bold text-center ">Кейсы</h2>
+    <div className="w-full h-auto mt-10 p-4 overflow-hidden">
+      <h2 className="text-4xl mb-8 pl-4 font-bold">Кейсы наших клиентов</h2>
       <Slider {...settings} className="w-full">
         {videos.map((video, index) => (
           <div key={index} className="p-4">

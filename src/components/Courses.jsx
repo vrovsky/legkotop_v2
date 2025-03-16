@@ -43,14 +43,15 @@ const courses = [
           <strong>окно обратной связи</strong> с ответами на вопросы.
         </p>
         <p className="font-semibold">Доступ навсегда!</p>
-        <a
-          href="https://legkotopcorrection.wayforpay.shop/"
+        <Link
+          to="/correction-course"
+          // href="https://legkotopcorrection.wayforpay.shop/"
           target="_blank"
           rel="noopener noreferrer"
           className="block w-2xl text-center bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-4 rounded-lg transition-all"
         >
           Хочу на курс!
-        </a>
+        </Link>
       </div>
     ),
     gradient: "from-red-500 to-yellow-500",
@@ -91,9 +92,9 @@ const courses = [
         </p>
         <div className="pt-4">
           <Link
-            to="/consultation"
+            to="/sitting-course"
             // href="https://example.com/payment-link2"
-            // target="_blank"
+            target="_blank"
             rel="noopener noreferrer"
             className="block w-2xl text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-4 rounded-lg transition-all"
           >
@@ -118,14 +119,15 @@ const courses = [
           <strong>Курс-практикум "Основы хендлинга для мам"!</strong>
         </p>
         <div className="pt-4">
-          <a
-            href="https://secure.wayforpay.com/payment/se8e29f6d04ee"
+          <Link
+            // href="https://secure.wayforpay.com/payment/se8e29f6d04ee"
+            to="/handling-course"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-2xl text-center bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-4 rounded-lg transition-all"
           >
             Хочу на курс!
-          </a>
+          </Link>
         </div>
       </div>
     ),
@@ -173,14 +175,15 @@ const courses = [
         </ul>
 
         <div className="pt-4">
-          <a
-            href="https://secure.wayforpay.com/payment/sc9a241e72963"
+          <Link
+            // href="https://secure.wayforpay.com/payment/sc9a241e72963"
+            to="/specialists-course"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-2xl text-center bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-4 rounded-lg transition-all"
           >
             Хочу на курс!
-          </a>
+          </Link>
         </div>
       </div>
     ),
