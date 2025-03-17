@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo2.png";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,8 +22,8 @@ export default function Header() {
         }`}
       >
         <Link to="/" className="flex flex-row items-center">
-          <img src={logo} alt="Legko_top" className="w-24 ml-8 p-2" />
-          <div className="text-3xl font-bold ">Legko_Top</div>
+          <img src={logo} alt="Legko_top" className="w-36 ml-8" />
+          {/* <div className="text-3xl font-bold ">Legko_Top</div> */}
         </Link>
       </header>
     </>

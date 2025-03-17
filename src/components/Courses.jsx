@@ -6,7 +6,7 @@ const courses = [
   {
     title: 'Курс для родителей "Коррекция асимметрий у детей"',
     content: (
-      <div className="space-y-4 px-10 text-2xl">
+      <div className="space-y-4 px-10 py-4 text-2xl">
         <p>
           Вам нужен этот курс, если вы видите, что у ребенка были и/или есть:
         </p>
@@ -59,7 +59,7 @@ const courses = [
   {
     title: 'Курс для родителей "Сажать нельзя ждать"',
     content: (
-      <div className="space-y-4 text-2xl px-10">
+      <div className="space-y-4 text-2xl px-10 py-4">
         <p>
           Курс состоит из <strong>теоретического вебинара</strong>, видео с
           реальными младенцами, практики и упражнений для самостоятельного
@@ -108,7 +108,7 @@ const courses = [
   {
     title: 'Курс для родителей "Хендлинг 0 - 3 месяца"',
     content: (
-      <div className="space-y-4 text-2xl px-10">
+      <div className="space-y-4 text-2xl px-10 py-4">
         <p>
           Хотите научиться безопасно и комфортно носить ребенка на руках,
           успокаивать его без слез, позаботиться о его здоровье и своевременном
@@ -137,7 +137,7 @@ const courses = [
     title:
       'Курс для специалистов "Основы хендлинга и двигательной терапии для детей"',
     content: (
-      <div className="space-y-4 text-2xl px-10">
+      <div className="space-y-4 text-2xl px-10 py-4">
         <p className="font-semibold">Поздравляю, меня зовут Татьяна Труба!</p>
         <p>
           Приглашаю на авторский курс{" "}
@@ -198,23 +198,23 @@ export default function Courses() {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className="flex flex-col mx-auto my-20">
-      <div className="text-4xl font-bold pb-6 px-8 pt-6">Курсы</div>
+    <div className="flex flex-col mx-auto">
+      <div className="text-4xl font-bold p-10">Курсы</div>
       {courses.map((course, index) => (
         <div key={index} className="transition all duration-300 ease-in-out">
           <button
             className={`w-full text-left text-white text-4xl p-10 transition-all duration-300 ease-in-out
-                        bg-gradient-to-r ${course.gradient} hover:brightness-110`}
+                        bg-gradient-to-r ${course.gradient} hover:brightness-120`}
             onClick={() => toggleCourse(index)}
           >
             {course.title}
           </button>
           <div
             className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
-              openIndex === index ? "max-h-50xl" : "max-h-0"
+              openIndex === index ? "max-h-[1000px]" : "max-h-0"
             }`}
           >
-            <div className="p-4 bg-gray-100 rounded-b-lg text-gray-800">
+            <div className=" bg-gray-100 rounded-b-lg text-gray-800">
               {course.content}
             </div>
           </div>

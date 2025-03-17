@@ -14,11 +14,11 @@ export default function HomePage() {
     <>
       <Header />
       <Intro />
-      <Cases />
+      {/* <Cases /> */}
       <Courses />
-      <Reviews />
       <Consultation />
       <AboutMe />
+      <Reviews />
       <Footer />
     </>
   );
