@@ -48,13 +48,13 @@ const courses = [
           // href="https://legkotopcorrection.wayforpay.shop/"
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-2xl text-center bg-red-500 hover:bg-red-600 text-white font-bold py-4 px-4 rounded-lg transition-all"
+          className="block w-2xl text-center bg-[#F9291F] hover:bg-[#F2BB03] text-white font-bold py-4 px-4 rounded-lg transition-all duration-800 ease-in-out"
         >
           Хочу на курс!
         </Link>
       </div>
     ),
-    gradient: "from-red-500 to-yellow-500",
+    gradient: "from-[#F9291F] to-[#F2BB03]",
   },
   {
     title: 'Курс для родителей "Сажать нельзя ждать"',
@@ -96,17 +96,17 @@ const courses = [
             // href="https://example.com/payment-link2"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-2xl text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-4 rounded-lg transition-all"
+            className="block w-2xl text-center bg-[#0073d9] hover:bg-blue-400 text-white font-bold py-4 px-4 rounded-lg transition-all duration-800 ease-in-out"
           >
             Хочу на курс!
           </Link>
         </div>
       </div>
     ),
-    gradient: "from-blue-500 to-cyan-500",
+    gradient: "from-[#0073d9] to-blue-400",
   },
   {
-    title: 'Курс для родителей "Хендлинг 0-3 месяца"',
+    title: 'Курс для родителей "Хендлинг 0 - 3 месяца"',
     content: (
       <div className="space-y-4 text-2xl px-10">
         <p>
@@ -124,14 +124,14 @@ const courses = [
             to="/handling-course"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-2xl text-center bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-4 rounded-lg transition-all"
+            className="block w-2xl text-center bg-green-600 hover:bg-lime-400 text-white font-bold py-4 px-4 rounded-lg transition-all duration-800 ease-in-out"
           >
             Хочу на курс!
           </Link>
         </div>
       </div>
     ),
-    gradient: "from-green-500 to-lime-500",
+    gradient: "from-green-600 to-lime-400",
   },
   {
     title:
@@ -180,14 +180,14 @@ const courses = [
             to="/specialists-course"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-2xl text-center bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-4 rounded-lg transition-all"
+            className="block w-2xl text-center bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-4 rounded-lg transition-all duration-800 ease-in-out"
           >
             Хочу на курс!
           </Link>
         </div>
       </div>
     ),
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-purple-500 to-purple-600",
   },
 ];
 
@@ -201,19 +201,17 @@ export default function Courses() {
     <div className="flex flex-col mx-auto my-20">
       <div className="text-4xl font-bold pb-6 px-8 pt-6">Курсы</div>
       {courses.map((course, index) => (
-        <div key={index} className="">
+        <div key={index} className="transition all duration-300 ease-in-out">
           <button
-            className={`w-full text-left text-white text-4xl p-10 transition-all 
+            className={`w-full text-left text-white text-4xl p-10 transition-all duration-300 ease-in-out
                         bg-gradient-to-r ${course.gradient} hover:brightness-110`}
             onClick={() => toggleCourse(index)}
           >
             {course.title}
           </button>
           <div
-            className={`overflow-hidden transition-[max-height] duration-200 ease-in-out ${
-              openIndex === index
-                ? "max-h-50xl opacity-100"
-                : "max-h-0 opacity-0"
+            className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
+              openIndex === index ? "max-h-50xl" : "max-h-0"
             }`}
           >
             <div className="p-4 bg-gray-100 rounded-b-lg text-gray-800">
