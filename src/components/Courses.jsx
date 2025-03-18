@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const courses = [
   {
-    title: 'Курс для родителей "Коррекция асимметрий у детей"',
+    title: 'Курс для родителей "Коррекция Асимметрий у Детей"',
     content: (
       <div className="space-y-4 px-10 py-4 text-2xl">
         <p>
@@ -57,7 +57,7 @@ const courses = [
     gradient: "from-[#F9291F] to-[#F2BB03]",
   },
   {
-    title: 'Курс для родителей "Сажать нельзя ждать"',
+    title: 'Курс для родителей "Сажать Нельзя Ждать"',
     content: (
       <div className="space-y-4 text-2xl px-10 py-4">
         <p>
@@ -106,7 +106,7 @@ const courses = [
     gradient: "from-[#0073d9] to-blue-400",
   },
   {
-    title: 'Курс для родителей "Хендлинг 0 - 3 месяца"',
+    title: 'Курс для родителей "Хендлинг 0 - 3 Месяца"',
     content: (
       <div className="space-y-4 text-2xl px-10 py-4">
         <p>
@@ -135,7 +135,7 @@ const courses = [
   },
   {
     title:
-      'Курс для специалистов "Основы хендлинга и двигательной терапии для детей"',
+      'Курс для специалистов "Основы Хендлинга и Двигательной Терапии Для Детей"',
     content: (
       <div className="space-y-4 text-2xl px-10 py-4">
         <p className="font-semibold">Поздравляю, меня зовут Татьяна Труба!</p>
