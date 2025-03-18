@@ -1,11 +1,29 @@
 import React from "react";
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
+
 import tatyana3 from "../assets/tatyana3.png";
 import course1 from "../assets/course1.png";
 import course2 from "../assets/course2.png";
 import course3 from "../assets/course3.png";
 import course4 from "../assets/course4.png";
+
+const TariffCard = ({ title, price, features }) => (
+  <div className="flex flex-col items-center p-6  rounded-lg shadow-md bg-white">
+    <img className="w-20 h-20 mb-4" src="/placeholder.jpg" alt={title} />
+    <h2 className="text-2xl font-bold  border-b-4 border-red-400 pb-2 mb-4">
+      {title}
+    </h2>
+    <ul className="space-y-2 text-center text-gray-700">
+      {features.map((feature, index) => (
+        <li key={index}>{feature}</li>
+      ))}
+    </ul>
+    <button className="mt-6 text-lg bg-red-400 px-6 py-2 hover:bg-red-500 text-white font-bold rounded-lg transition duration-300">
+      {price} EUR
+    </button>
+  </div>
+);
 
 const CheckIcon = () => (
   <svg
@@ -44,9 +62,47 @@ const symptoms = [
 ];
 
 export default function ParentsCorrectionCoursePage() {
+  const tariffs = [
+    {
+      title: "Базовый",
+      price: 40,
+      features: [
+        "Вебинар с теоретической базой",
+        "4 блока упражнений для детей разного возраста и разных видов асимметрий",
+        "Возможность задавать вопросы в рамках курса",
+        "Доступ навсегда",
+      ],
+    },
+    {
+      title: "Индивидуальный для родителей",
+      price: 70,
+      features: [
+        "Индивидуальное тестирование и определение причин асимметрии вашего ребенка",
+        "Вебинар с теоретической базой",
+        "4 блока упражнений для детей разного возраста и разных видов асимметрий",
+        "Возможность задавать вопросы в рамках курса",
+        "Доступ к курсу навсегда",
+        "Обратная связь от Татьяна Трубы в течение 1 месяца",
+      ],
+    },
+    {
+      title: "Супервизия для специалистов",
+      price: 300,
+      features: [
+        "Индивидуальное тестирование и определение причин асимметрии ваших клиентов",
+        "Вебинар с теоретической базой",
+        "4 блока упражнений для детей разного возраста и разных видов асимметрий",
+        "Доступ к курсу навсегда",
+        "Возможность разбирать кейсы, быть куратором и задавать вопросы в рамках курса",
+        "Обратная связь от Татьяна Трубы в течение 3 месяцев",
+      ],
+    },
+  ];
+
   return (
     <>
       <Header />
+
       <div className="flex items-center my-20 mx-72 justify-between">
         <div>
           <h2 className="text-4xl font-bold">
@@ -72,7 +128,7 @@ export default function ParentsCorrectionCoursePage() {
           </div>
         </div>
       </div>
-      {/* //////////////////////////// */}
+      {/* ////////////////////////////*/}
       <h2 className="text-4xl font-bold text-center mt-30 mb-10">
         Вам точно нужен этот курс, если вы видите, что у ребенка
       </h2>
@@ -156,6 +212,33 @@ export default function ParentsCorrectionCoursePage() {
           <button className="text-xl bg-red-400 px-24 py-2 hover:bg-red-500 text-white transition-all duration-800 ease-in-out font-bold rounded mt-8">
             Выбрать тариф
           </button>
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto py-16">
+        <h2 className="text-4xl font-bold text-center mb-12">Тарифы</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {tariffs.map((tariff, index) => (
+            <TariffCard key={index} {...tariff} />
+          ))}
+        </div>
+      </div>
+
+      <div className="flex flex-col p-8 items-center">
+        <h2 className="text-4xl font-bold text-center mb-12">
+          Ответы на вопросы
+        </h2>
+        <div>
+          <div>Подойдет ли мне курс, если я просто мама, а не специалист? </div>
+          <div>
+            Ребенок только начал ползать раненым партизаном. Может подождать и
+            само пройдет?
+          </div>
+          <div>Подойдет ли курс для детского массажиста? </div>
+          <div>
+            Я уже покупала курс у другого специалиста, но нам не помогло! Как я
+            мгу быть уверена, что этот поможет?{" "}
+          </div>
         </div>
       </div>
 
