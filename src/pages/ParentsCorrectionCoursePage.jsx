@@ -10,17 +10,17 @@ import course2 from "../assets/course2.png";
 import course3 from "../assets/course3.png";
 import course4 from "../assets/course4.png";
 
-const TariffCard = ({ title, price, features }) => (
-  <div className="flex flex-col items-center p-6  rounded-lg shadow-md bg-white">
-    <img className="w-20 h-20 mb-4" src="/placeholder.jpg" alt={title} />
-    <h2 className="text-2xl font-bold  border-b-4 border-red-400 pb-2 mb-4">
-      {title}
-    </h2>
-    <ul className="space-y-2 text-center text-gray-700">
-      {features.map((feature, index) => (
-        <li key={index}>{feature}</li>
-      ))}
-    </ul>
+const TariffCard = ({ title, price, features, image }) => (
+  <div className="flex flex-col items-center justify-between rounded-3xl shadow-xl pb-4">
+    <div className="flex flex-col items-center p-6 ">
+      <img className="w-56 h-56 mb-4 rounded-2xl" src={image} alt={title} />
+      <h2 className="text-2xl font-bold   pb-2 mb-4">{title}</h2>
+      <ul className="space-y-2 text-xl text-left text-gray-700 list-disc pt-6 border-t-4 border-red-400">
+        {features.map((feature, index) => (
+          <li key={index}>{feature}</li>
+        ))}
+      </ul>
+    </div>
     <button className="mt-6 text-lg bg-red-400 px-6 py-2 hover:bg-red-500 text-white font-bold rounded-lg transition duration-300">
       {price} EUR
     </button>
@@ -73,6 +73,7 @@ const tariffs = [
       "Возможность задавать вопросы в рамках курса",
       "Доступ навсегда",
     ],
+    image: course1,
   },
   {
     title: "Индивидуальный для родителей",
@@ -85,6 +86,7 @@ const tariffs = [
       "Доступ к курсу навсегда",
       "Обратная связь от Татьяна Трубы в течение 1 месяца",
     ],
+    image: course2,
   },
   {
     title: "Супервизия для специалистов",
@@ -97,6 +99,7 @@ const tariffs = [
       "Возможность разбирать кейсы, быть куратором и задавать вопросы в рамках курса",
       "Обратная связь от Татьяна Трубы в течение 3 месяцев",
     ],
+    image: course3,
   },
 ];
 
@@ -181,7 +184,7 @@ export default function ParentsCorrectionCoursePage() {
         <h2 className="text-4xl font-bold pb-8">
           Как асимметрия в первый год жизни влияет на осанку в будущем?
         </h2>
-        <p className="text-xl text-center pb-10">
+        <p className="text-xl font-bold text-center pb-10">
           На вебинаре дала базу о влиянии асимметрий на развитие всего
           организма, причины и последствия врожденных и установочных асимметрий
           у детей
@@ -197,7 +200,7 @@ export default function ParentsCorrectionCoursePage() {
         ></iframe>
       </div>
 
-      <div className="flex flex-col m-4 p-8 lg:flex-row justify-around">
+      <div className="flex flex-col m-4 p-8 gap-8 lg:flex-row justify-around">
         <div class="grid grid-cols-2 grid-rows-2 gap-4 p-4 max-w-2xl mx-auto">
           <img
             src={course1}
@@ -244,16 +247,16 @@ export default function ParentsCorrectionCoursePage() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto py-16">
+      <div className="px-40 py-16">
         <h2 className="text-4xl font-bold text-center mb-12">Тарифы</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {tariffs.map((tariff, index) => (
             <TariffCard key={index} {...tariff} />
           ))}
         </div>
       </div>
 
-      <div className="max-w-2xl mx-auto p-6">
+      <div className="mx-40 my-20 p-10">
         <h2 className="text-4xl font-bold text-center mb-8">
           Ответы на вопросы
         </h2>
@@ -262,11 +265,15 @@ export default function ParentsCorrectionCoursePage() {
             <div key={index} className="border-b border-gray-300">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left flex justify-between items-center text-xl font-semibold p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition"
+                className="w-full text-left flex justify-between items-center text-2xl font-semibold p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition"
               >
                 {faq.question}
-                <span className="text-2xl ">
-                  {openIndex === index ? "X" : "+"}
+                <span
+                  className={`text-5xl transform transition-transform duration-300 ${
+                    openIndex === index ? "rotate-45" : "rotate-0"
+                  }`}
+                >
+                  +
                 </span>
               </button>
               <div
@@ -274,7 +281,9 @@ export default function ParentsCorrectionCoursePage() {
                   openIndex === index ? "max-h-40" : "max-h-0"
                 }`}
               >
-                <div className="p-4 text-xl text-gray-700">{faq.answer}</div>
+                <div className="p-4 text-2xl text-semibold text-gray-700">
+                  {faq.answer}
+                </div>
               </div>
             </div>
           ))}
