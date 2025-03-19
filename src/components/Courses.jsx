@@ -6,7 +6,7 @@ const courses = [
   {
     title: 'Курс для родителей "Коррекция Асимметрий у Детей"',
     content: (
-      <div className="space-y-4 px-10 py-4 text-2xl">
+      <div className="space-y-4 px-4 sm:px-10 py-4 text-lg sm:text-2xl">
         <p>
           Вам нужен этот курс, если вы видите, что у ребенка были и/или есть:
         </p>
@@ -48,7 +48,7 @@ const courses = [
           // href="https://legkotopcorrection.wayforpay.shop/"
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-2xl text-center bg-[#F9291F] hover:bg-[#F2BB03] text-white font-bold py-4 px-4 rounded-lg transition-all duration-800 ease-in-out"
+          className="block w-full sm:w-2xl text-center bg-[#F9291F] hover:bg-[#F2BB03] text-white font-bold py-3 rounded-lg transition-all duration-300"
         >
           Хочу на курс!
         </Link>
@@ -59,7 +59,7 @@ const courses = [
   {
     title: 'Курс для родителей "Сажать Нельзя Ждать"',
     content: (
-      <div className="space-y-4 text-2xl px-10 py-4">
+      <div className="space-y-4 px-4 sm:px-10 py-4 text-lg sm:text-2xl">
         <p>
           Курс состоит из <strong>теоретического вебинара</strong>, видео с
           реальными младенцами, практики и упражнений для самостоятельного
@@ -96,7 +96,7 @@ const courses = [
             // href="https://example.com/payment-link2"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-2xl text-center bg-[#0073d9] hover:bg-blue-400 text-white font-bold py-4 px-4 rounded-lg transition-all duration-800 ease-in-out"
+            className="block w-full sm:w-2xl text-center bg-[#0073d9] hover:bg-blue-400 text-white font-bold py-3 rounded-lg transition-all duration-300"
           >
             Хочу на курс!
           </Link>
@@ -108,7 +108,7 @@ const courses = [
   {
     title: 'Курс для родителей "Хендлинг 0 - 3 Месяца"',
     content: (
-      <div className="space-y-4 text-2xl px-10 py-4">
+      <div className="space-y-4 px-4 sm:px-10 py-4 text-lg sm:text-2xl">
         <p>
           Хотите научиться безопасно и комфортно носить ребенка на руках,
           успокаивать его без слез, позаботиться о его здоровье и своевременном
@@ -124,7 +124,7 @@ const courses = [
             to="/handling-course"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-2xl text-center bg-green-600 hover:bg-lime-400 text-white font-bold py-4 px-4 rounded-lg transition-all duration-800 ease-in-out"
+            className="block w-full sm:w-2xl text-center bg-green-600 hover:bg-lime-400 text-white font-bold py-3 rounded-lg transition-all duration-300"
           >
             Хочу на курс!
           </Link>
@@ -137,7 +137,7 @@ const courses = [
     title:
       'Курс для специалистов "Основы Хендлинга и Двигательной Терапии Для Детей"',
     content: (
-      <div className="space-y-4 text-2xl px-10 py-4">
+      <div className="space-y-4 px-4 sm:px-10 py-4 text-lg sm:text-2xl">
         <p className="font-semibold">Поздравляю, меня зовут Татьяна Труба!</p>
         <p>
           Приглашаю на авторский курс{" "}
@@ -180,14 +180,14 @@ const courses = [
             to="/specialists-course"
             target="_blank"
             rel="noopener noreferrer"
-            className="block w-2xl text-center bg-purple-500 hover:bg-purple-600 text-white font-bold py-4 px-4 rounded-lg transition-all duration-800 ease-in-out"
+            className="block w-full sm:w-2xl text-center bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 rounded-lg transition-all duration-300"
           >
             Хочу на курс!
           </Link>
         </div>
       </div>
     ),
-    gradient: "from-purple-500 to-purple-600",
+    gradient: "from-purple-700 to-purple-400",
   },
 ];
 
@@ -198,12 +198,12 @@ export default function Courses() {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className="flex flex-col mx-auto">
-      <div className="text-4xl font-bold p-10">Курсы</div>
+    <div className="flex flex-col mx-auto ">
+      <div className="text-3xl sm:text-4xl font-bold p-10">Курсы</div>
       {courses.map((course, index) => (
         <div key={index} className="transition all duration-300 ease-in-out">
           <button
-            className={`w-full text-left text-white text-4xl p-10 transition-all duration-300 ease-in-out
+            className={`w-full text-left text-white text-2xl sm:text-4xl p-6 sm:p-10 transition-all duration-300 ease-in-out
                         bg-gradient-to-r ${course.gradient} hover:brightness-120`}
             onClick={() => toggleCourse(index)}
           >
@@ -211,7 +211,7 @@ export default function Courses() {
           </button>
           <div
             className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
-              openIndex === index ? "max-h-[1000px]" : "max-h-0"
+              openIndex === index ? "max-h-[2000px]" : "max-h-0"
             }`}
           >
             <div className=" bg-gray-100 rounded-b-lg text-gray-800">
