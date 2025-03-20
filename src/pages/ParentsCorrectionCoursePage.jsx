@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
+import Cases from "../components/Cases.jsx";
 
 import tatyana3 from "../assets/tatyana3.png";
 import course1 from "../assets/course1.png";
@@ -124,7 +125,7 @@ const faqs = [
     question:
       "Я уже покупала курс у другого специалиста, но нам не помогло! Как я могу быть уверена, что этот поможет?",
     answer:
-      "Мы гарантируем 100% возврат ваших денег в первую неделю прохождения курса, если вы увидете, что упражнения вам не подходят. К счастью, они на столько эффективны, что мы ни разу еще не делали возврат! Однако покупка курса - это как покупка абонемента в спортзал. Его не достаточно просто купить, нужно регулярно делать упражнения, следить за техникой выполнения и если в чем-то сомневаетесь, лучше спросите у тренера, а не у подружки )))",
+      "Мы гарантируем 100% возврат ваших денег в первую неделю прохождения курса, если вы увидете, что упражнения вам не подходят. К счастью, они на столько эффективны, что мы ни разу еще не делали возврат! Однако покупка курса - это как покупка абонемента в спортзал. Его не достаточно просто купить, нужно регулярно делать упражнения, следить за техникой выполнения и если в чем-то сомневаетесь, у вас всегда есть возможность уточнить информацию у специалиста",
   },
 ];
 
@@ -139,7 +140,7 @@ export default function ParentsCorrectionCoursePage() {
     <>
       <Header />
 
-      <div className="flex items-center flex-col-reverse gap-4 lg:flex-row my-20 mx-4 lg:mx-40 xl:mx-80 justify-between">
+      <div className=" flex items-center flex-col-reverse gap-4 lg:flex-row py-20 px-4 lg:px-40 xl:px-80 justify-between">
         <div className="flex xl:items-start flex-col">
           <h2 className="text-4xl font-bold">
             Курс "Коррекция Асимметрий у Детей"
@@ -173,7 +174,7 @@ export default function ParentsCorrectionCoursePage() {
             <CheckIcon />
             <div className="w-full lg:w-64">
               <h2 className="text-2xl font-bold">{item.title}</h2>
-              <p className=" text-xl">{item.description}</p>
+              <p className=" text-xl text-justify">{item.description}</p>
             </div>
           </div>
         ))}
@@ -211,10 +212,9 @@ export default function ParentsCorrectionCoursePage() {
             <img src={course4} class="rounded-2xl shadow-xl" />
           </div>
         </div>
-        <div className="pr-4 sm:pr-40">
-          <h2 className="text-2xl sm:text-4xl font-bold ">
-            Вы можете самостоятельно помочь своему ребенку справиться с
-            асимметрией!
+        <div className="pr-4 xl:pr-40 text-justify">
+          <h2 className="text-2xl sm:text-4xl text-start lg:text-justify font-bold ">
+            Вы можете самостоятельно исправить асимметрию у своего ребенка!
           </h2>
           <p className="text-lg sm:text-2xl mt-6">
             Это настолько эффективно, что даже специалисты с большим опытом
@@ -246,7 +246,9 @@ export default function ParentsCorrectionCoursePage() {
         </div>
       </div>
 
-      <div className="px-4 xl:px-40 py-16">
+      <Cases />
+
+      <div className="px-4 xl:px-40 py-16 ">
         <h2 className="text-4xl font-bold text-center mb-12">Тарифы</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-4">
           {tariffs.map((tariff, index) => (
@@ -280,7 +282,7 @@ export default function ParentsCorrectionCoursePage() {
                   openIndex === index ? "max-h-[1000px]" : "max-h-0"
                 }`}
               >
-                <div className="p-4 text-lg xl:text-2xl text-semibold text-gray-700">
+                <div className="p-4 text-lg xl:text-2xl text-semibold text-gray-700  text-justify">
                   {faq.answer}
                 </div>
               </div>

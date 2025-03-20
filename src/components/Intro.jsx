@@ -6,8 +6,8 @@ export default function Intro() {
     <div>
       <div className="bg-[#F2BB03]">
         <div className="flex flex-col lg:flex-row items-center">
-          <div className="w-full lg:w-1/2 flex flex-col justify-center py-10 px-6 md:px-16 lg:px-30">
-            <div className="text-3xl md:text-4xl lg:text-5xl font-semibold text-center lg:text-left">
+          <div className="w-full lg:w-1/2 flex flex-col justify-center py-10 px-6 md:px-16 lg:px-30 xl:ml-20">
+            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-center lg:text-left">
               Все о психомоторном развитии детей от рождения до первых шагов для
               родителей и специалистов
             </div>

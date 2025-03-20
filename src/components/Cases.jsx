@@ -2,23 +2,47 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black", size: "10px" }}
+      onClick={onClick}
+    />
+  );
+}
+
 export default function Cases() {
   const videos = [
     "/videos/video1.mp4",
     "/videos/video2.mp4",
     "/videos/video3.mp4",
-    "/videos/video4.mp4",
-    "/videos/video5.mp4",
+    // "/videos/video4.mp4",
+    // "/videos/video5.mp4",
   ];
 
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -32,7 +56,7 @@ export default function Cases() {
   };
 
   return (
-    <div className="w-full h-auto mt-10 p-4 overflow-hidden">
+    <div className="w-full h-auto pt-10 p-4 overflow-hidden bg-amber-100">
       {/* <h2 className="text-4xl mb-8 pl-4 font-bold">Кейсы наших клиентов</h2> */}
       <Slider {...settings} className="w-full">
         {videos.map((video, index) => (
@@ -41,7 +65,7 @@ export default function Cases() {
               src={video}
               controls
               playsInline
-              className="w-full h-[640px] object-contain rounded-lg"
+              className=" h-[640px] object-contain rounded-lg"
             />
           </div>
         ))}

@@ -139,7 +139,7 @@ export default function ParrentsSittingCoursePage() {
     <>
       <Header />
 
-      <div className="flex items-center flex-col-reverse gap-4 lg:flex-row my-20 mx-4 lg:mx-40 xl:mx-80 justify-between">
+      <div className=" flex items-center flex-col-reverse gap-4 lg:flex-row py-20 px-4 lg:px-40 xl:px-80 justify-between">
         <div className="flex xl:items-start flex-col">
           <h2 className="text-4xl font-bold">Курс "Сажать нельзя ждать"</h2>
           <h1 className="text-2xl font-semibold mt-6">
