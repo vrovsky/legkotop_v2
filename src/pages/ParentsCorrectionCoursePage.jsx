@@ -154,8 +154,7 @@ export default function ParentsCorrectionCoursePage() {
           </button>
         </div>
         <div>
-          <div className="relative flex justify-center lg:justify-end">
-            {/* <div className="absolute -z-100  bg-teal-400 w-64 h-64 lg:w-[800px] lg:h-[650px] rounded-l-4xl top-[-30px] right-[-500px]"></div> */}
+          <div className="w-full max-w-sm lg:max-w-xl xl:max-w-5xl">
             <img
               src={tatyana3}
               alt="Intro Pic"
@@ -168,7 +167,7 @@ export default function ParentsCorrectionCoursePage() {
         Вам точно нужен этот курс, если вы видите, что у ребенка
       </h2>
 
-      <div className="flex flex-col items-center lg:flex-row gap-4 justify-between mx-4 xl:mx-60">
+      <div className="flex flex-col items-center lg:items-start lg:flex-row gap-4 justify-between mx-4 xl:mx-60">
         {symptoms.map((item, index) => (
           <div key={index} className="flex flex-row gap-2">
             <CheckIcon />
