@@ -2,47 +2,26 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-function SampleNextArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "black" }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "black", size: "10px" }}
-      onClick={onClick}
-    />
-  );
-}
-
 export default function Cases() {
   const videos = [
     "/videos/video1.mp4",
     "/videos/video2.mp4",
     "/videos/video3.mp4",
-    // "/videos/video4.mp4",
-    // "/videos/video5.mp4",
+    "/videos/video4.mp4",
+    "/videos/video5.mp4",
   ];
 
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 3000,
-    // nextArrow: <SampleNextArrow />,
-    // prevArrow: <SamplePrevArrow />,
+
+    prevArrow: <CustomPrevArrow />,
+    nextArrow: <CustomNextArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -56,20 +35,50 @@ export default function Cases() {
   };
 
   return (
-    <div className="w-full h-auto pt-10 p-4 overflow-hidden bg-amber-100">
-      {/* <h2 className="text-4xl mb-8 pl-4 font-bold">Кейсы наших клиентов</h2> */}
-      <Slider {...settings} className="w-full">
-        {videos.map((video, index) => (
-          <div key={index} className="p-4">
-            <video
-              src={video}
-              controls
-              playsInline
-              className=" h-[640px] object-contain rounded-lg"
-            />
-          </div>
-        ))}
-      </Slider>
+    <div className="w-full bg-amber-100 py-10 px-10">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-4xl mb-8 font-bold text-center">
+          Кейсы наших клиентов
+        </h2>
+        <Slider {...settings}>
+          {videos.map((video, index) => (
+            <div key={index} className="px-2">
+              <div className="w-full h-[400px] md:h-[500px] lg:h-[640px] flex justify-center">
+                <video
+                  src={video}
+                  controls
+                  playsInline
+                  className="rounded-lg max-w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
+  );
+}
+
+function CustomNextArrow(props) {
+  const { onClick } = props;
+  return (
+    <button
+      onClick={onClick}
+      className="absolute right-0.5 top-1/2 transform -translate-y-1/2 bg-gray-200 text-black w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:bg-gray-400 transition"
+    >
+      ▶
+    </button>
+  );
+}
+
+function CustomPrevArrow(props) {
+  const { onClick } = props;
+  return (
+    <button
+      onClick={onClick}
+      className="absolute z-10 top-1/2 transform -translate-y-1/2 bg-gray-200 text-black w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:bg-gray-400 transition"
+    >
+      ◀
+    </button>
   );
 }
