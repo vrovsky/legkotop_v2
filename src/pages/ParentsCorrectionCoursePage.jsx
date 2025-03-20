@@ -139,8 +139,8 @@ export default function ParentsCorrectionCoursePage() {
     <>
       <Header />
 
-      <div className="flex items-center my-20 mx-72 justify-between">
-        <div>
+      <div className="flex items-center flex-col-reverse gap-4 lg:flex-row my-20 mx-4 lg:mx-40 xl:mx-80 justify-between">
+        <div className="flex xl:items-start flex-col">
           <h2 className="text-4xl font-bold">
             Курс "Коррекция Асимметрий у Детей"
           </h2>
@@ -168,11 +168,11 @@ export default function ParentsCorrectionCoursePage() {
         Вам точно нужен этот курс, если вы видите, что у ребенка
       </h2>
 
-      <div className="flex justify-between mx-60">
+      <div className="flex flex-col items-center lg:flex-row gap-4 justify-between mx-4 xl:mx-60">
         {symptoms.map((item, index) => (
           <div key={index} className="flex flex-row gap-2">
             <CheckIcon />
-            <div className="w-64">
+            <div className="w-full lg:w-64">
               <h2 className="text-2xl font-bold">{item.title}</h2>
               <p className=" text-xl">{item.description}</p>
             </div>
@@ -180,17 +180,17 @@ export default function ParentsCorrectionCoursePage() {
         ))}
       </div>
 
-      <div className="flex flex-col items-center my-20 py-10 px-64 bg-cyan-400">
+      <div className="flex flex-col items-center my-20 py-10 px-4 sm:px-64 bg-cyan-400">
         <h2 className="text-4xl font-bold pb-8">
           Как асимметрия в первый год жизни влияет на осанку в будущем?
         </h2>
-        <p className="text-xl font-bold text-center pb-10">
+        <p className="text-xl font-bold sm:text-center pb-10">
           На вебинаре дала базу о влиянии асимметрий на развитие всего
           организма, причины и последствия врожденных и установочных асимметрий
           у детей
         </p>
         <iframe
-          className="w-3xl aspect-video rounded-4xl"
+          className="w-full sm:w-3xl aspect-video rounded-4xl"
           src="https://www.youtube.com/embed/FCU3SCULqnY?si=T4KIFvvdcT-u1lgq"
           title="YouTube video player"
           frameborder="0"
@@ -212,32 +212,32 @@ export default function ParentsCorrectionCoursePage() {
             <img src={course4} class="rounded-2xl shadow-xl" />
           </div>
         </div>
-        <div className="pr-40">
-          <h2 className="text-4xl font-bold ">
+        <div className="pr-4 sm:pr-40">
+          <h2 className="text-2xl sm:text-4xl font-bold ">
             Вы можете самостоятельно помочь своему ребенку справиться с
             асимметрией!
           </h2>
-          <p className="text-2xl mt-6">
+          <p className="text-lg sm:text-2xl mt-6">
             Это настолько эффективно, что даже специалисты с большим опытом
             работы пишут восторженные отзывы!
           </p>
-          <p className="text-2xl mt-6">
+          <p className="text-lg sm:text-2xl mt-6">
             На коррекцию асимметрии обычно уходит от 2 до 4 недель, если вы
             четко понимаете причины, которые повлияли на ее формирование и
             делаете соответствующие упражнения регулярно. Все просто, логично и
             интуитивно понятно!
           </p>
-          <p className="text-2xl mt-6 font-bold">
+          <p className="text-lg sm:text-2xl mt-6 font-bold">
             Для этого у вас будет вебинар с теорией и 4 блока упражнений с
             подробным описанием техники выполнения.
           </p>
-          <p className="text-2xl mt-6">
+          <p className="text-lg sm:text-2xl mt-6">
             У моих клиентов зачастую получается справиться самостоятельно. Но
             бывают ситуации, когда я рекомендую дополнительно обращаться к
             ортопеду, остеопату или кинезиологу, чтобы провести исследования или
             откорректировать компенсации возникшие в теле ребен
           </p>
-          <p className="text-2xl mt-6">
+          <p className="text-lg sm:text-2xl mt-6">
             Для сложных случаев асимметрии на курсе предусмотрено{" "}
             <strong>окно обратной связи с ответами на вопросы</strong>.
           </p>
@@ -247,17 +247,17 @@ export default function ParentsCorrectionCoursePage() {
         </div>
       </div>
 
-      <div className="px-40 py-16">
+      <div className="px-4 xl:px-40 py-16">
         <h2 className="text-4xl font-bold text-center mb-12">Тарифы</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-4">
           {tariffs.map((tariff, index) => (
             <TariffCard key={index} {...tariff} />
           ))}
         </div>
       </div>
 
-      <div className="mx-40 my-20 p-10">
-        <h2 className="text-4xl font-bold text-center mb-8">
+      <div className="mx-4 xl:mx-40 my-20 p-4 xl:p-10">
+        <h2 className="text-2xl xl:text-4xl font-bold text-center mb-8">
           Ответы на вопросы
         </h2>
         <div className="space-y-4">
@@ -265,11 +265,11 @@ export default function ParentsCorrectionCoursePage() {
             <div key={index} className="border-b border-gray-300">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left flex justify-between items-center text-2xl font-semibold p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition"
+                className="w-full text-left flex justify-between items-center text-lg xl:text-2xl font-semibold p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition"
               >
                 {faq.question}
                 <span
-                  className={`text-5xl transform transition-transform duration-300 ${
+                  className={`text-3xl xl:text-5xl transform transition-transform duration-300 ${
                     openIndex === index ? "rotate-45" : "rotate-0"
                   }`}
                 >
@@ -278,10 +278,10 @@ export default function ParentsCorrectionCoursePage() {
               </button>
               <div
                 className={`overflow-hidden transition-[max-height] duration-300 ease-in-out ${
-                  openIndex === index ? "max-h-40" : "max-h-0"
+                  openIndex === index ? "max-h-[1000px]" : "max-h-0"
                 }`}
               >
-                <div className="p-4 text-2xl text-semibold text-gray-700">
+                <div className="p-4 text-lg xl:text-2xl text-semibold text-gray-700">
                   {faq.answer}
                 </div>
               </div>
