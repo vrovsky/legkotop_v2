@@ -64,7 +64,7 @@ function CustomNextArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute right-0.5 top-1/2 transform -translate-y-1/2 bg-gray-200 text-black w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:bg-gray-400 transition"
+      className="absolute right-[-40px] xl:right-[-70px] top-1/2 transform -translate-y-1/2 bg-gray-200 text-black w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:bg-gray-400 transition"
     >
       ▶
     </button>
@@ -76,7 +76,7 @@ function CustomPrevArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute z-10 top-1/2 transform -translate-y-1/2 bg-gray-200 text-black w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:bg-gray-400 transition"
+      className="absolute left-[-70px] top-1/2 transform -translate-y-1/2 bg-gray-200 text-black w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:bg-gray-400 transition"
     >
       ◀
     </button>

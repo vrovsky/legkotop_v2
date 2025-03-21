@@ -7,6 +7,7 @@ import Courses from "../components/Courses.jsx";
 import Reviews from "../components/Reviews.jsx";
 import Consultation from "../components/Consultation.jsx";
 import AboutMe from "../components/AboutMe.jsx";
+import Lections from "../components/Lections.jsx";
 import Footer from "../components/Footer.jsx";
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
       {/* <Cases /> */}
       <Courses />
       <Consultation />
+      <Lections />
       <AboutMe />
       <Reviews />
       <Footer />
