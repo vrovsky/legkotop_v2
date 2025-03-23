@@ -3,7 +3,7 @@ import { FaYoutube, FaTelegram, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className="p-4 bg-[#272119] text-white">
+    <div className="p-4 bg-[#272119] text-white px-4 xl:px-40">
       <h2 className="text-base sm:text-xl py-4 font-semibold">
         Мои Социальные Сети
       </h2>

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function AboutMe() {
   return (
-    <div className="p-4 sm:p-10">
+    <div className="py-4 sm:py-10 px-4 xl:px-40 text-justify text-[#3c62c9]">
       <h1 className="text-2xl sm:text-4xl font-bold mb-6">
         Обо мне и моей методике
       </h1>

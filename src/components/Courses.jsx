@@ -48,7 +48,7 @@ const courses = [
           // href="https://legkotopcorrection.wayforpay.shop/"
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full sm:w-2xl text-center bg-[#F9291F] hover:bg-[#F2BB03] text-white font-bold py-3 rounded-lg transition-all duration-300"
+          className="block w-full sm:w-2xl text-center bg-[#F9291F] hover:bg-[#F2BB03]  text-white font-bold py-3 rounded-lg transition-all duration-300"
         >
           Хочу на курс!
         </Link>
@@ -198,12 +198,14 @@ export default function Courses() {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className="flex flex-col mx-auto ">
-      <div className="text-3xl sm:text-4xl font-bold p-10">Курсы</div>
+    <div className="flex flex-col mx-auto text-justify">
+      <div className="text-3xl sm:text-4xl font-bold my-10 px-4 xl:px-40">
+        Курсы
+      </div>
       {courses.map((course, index) => (
         <div key={index} className="transition all duration-300 ease-in-out">
           <button
-            className={`w-full text-left text-white text-2xl sm:text-4xl p-6 sm:p-10 transition-all duration-300 ease-in-out
+            className={`w-full text-left text-white text-2xl sm:text-4xl py-6 sm:py-10 px-4 xl:px-40 transition-all duration-300 ease-in-out
                         bg-gradient-to-r ${course.gradient} hover:brightness-120`}
             onClick={() => toggleCourse(index)}
           >
@@ -214,7 +216,7 @@ export default function Courses() {
               openIndex === index ? "max-h-[2000px]" : "max-h-0"
             }`}
           >
-            <div className=" bg-gray-100 rounded-b-lg text-gray-800">
+            <div className=" bg-gray-100 rounded-b-lg text-gray-800 px-4xl:px-40">
               {course.content}
             </div>
           </div>

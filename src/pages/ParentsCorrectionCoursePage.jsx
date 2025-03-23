@@ -140,12 +140,12 @@ export default function ParentsCorrectionCoursePage() {
     <>
       <Header />
 
-      <div className=" flex items-center flex-col-reverse gap-4 lg:flex-row py-20 px-4 lg:px-40 xl:px-80 justify-between">
+      <div className=" flex items-center flex-col-reverse gap-12 lg:flex-row py-20 px-4 lg:px-40 xl:px-80 justify-between">
         <div className="flex xl:items-start flex-col">
-          <h2 className="text-4xl font-bold">
+          <h2 className="text-4xl font-bold ">
             Курс "Коррекция Асимметрий у Детей"
           </h2>
-          <h1 className="text-2xl font-semibold mt-6">
+          <h1 className="text-2xl font-semibold mt-6 text-justify">
             Помогите своему ребенку активно и симметрично двигаться в первый год
             жизни, чтобы обеспечить ему хорошую осанку в будущем
           </h1>

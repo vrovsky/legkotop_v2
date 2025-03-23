@@ -1,6 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import arrowRight from "../assets/arrowRight.svg";
 
 export default function Cases() {
   const videos = [
@@ -35,7 +36,7 @@ export default function Cases() {
   };
 
   return (
-    <div className="w-full bg-amber-100 py-10 px-10">
+    <div className="w-full bg-[#4da5a7] py-10 px-10">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl mb-8 font-bold text-center">
           Кейсы наших клиентов
@@ -64,9 +65,9 @@ function CustomNextArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute right-[-40px] xl:right-[-70px] top-1/2 transform -translate-y-1/2 bg-gray-200 text-black w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:bg-gray-400 transition"
+      className="absolute right-[-30px] xl:right-[-70px] top-1/2 transform -translate-y-1/2  w-12 h-12 flex items-center rounded-full  hover:bg-green-400 transition ease-in-out duration-400"
     >
-      ▶
+      <img src={arrowRight} className="w-24 h-24" alt="arrow-right" />
     </button>
   );
 }
@@ -76,9 +77,13 @@ function CustomPrevArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute left-[-70px] top-1/2 transform -translate-y-1/2 bg-gray-200 text-black w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:bg-gray-400 transition"
+      className="absolute left-[-30px] xl:left-[-70px] top-1/2 transform -translate-y-1/2 w-12 h-12 flex items-center rounded-full  hover:bg-green-400 transition ease-in-out duration-400"
     >
-      ◀
+      <img
+        src={arrowRight}
+        className="transform rotate-180 w-24 h-24"
+        alt="arrow-right"
+      />
     </button>
   );
 }

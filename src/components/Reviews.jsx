@@ -59,7 +59,7 @@ export default function Reviews() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -70,9 +70,9 @@ export default function Reviews() {
   };
 
   return (
-    <div className="w-full py-10 bg-gray-100">
-      <h2 className="text-4xl font-bold mb-6 pl-10">Отзывы</h2>
-      <div className=" px-6 mx-auto">
+    <div className="w-full py-10 bg-gray-100 px-4 sm:px-40">
+      <h2 className="text-4xl font-bold mb-6">Отзывы</h2>
+      <div className="mx-auto">
         <Slider {...settings}>
           {reviews.map((review, index) => (
             <div key={index} className="p-4">

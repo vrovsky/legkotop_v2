@@ -4,7 +4,7 @@ import tatyanaPhoto from "../assets/tatyana.png"; // Убедитесь, что 
 
 export default function Consultation() {
   return (
-    <div className="flex flex-col lg:flex-row items-center bg-white p-4 sm:p-12 lg:px-16">
+    <div className=" text-justify flex flex-col lg:flex-row items-center bg-white p-4 sm:p-12 lg:px-16">
       <div className="w-full lg:w-1/3 flex justify-center mb-6 lg:mb-0">
         <img
           src={tatyanaPhoto}
@@ -13,7 +13,7 @@ export default function Consultation() {
         />
       </div>
 
-      <div className="w-full lg:w-2/3 space-y-6 text-gray-800">
+      <div className="w-full lg:w-2/3 pr-4 xl:pr-30 space-y-6 text-gray-800">
         <h2 className="text-2xl sm:text-4xl font-bold">
           Индивидуальная консультация с Татьяной Трубой
         </h2>

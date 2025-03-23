@@ -16,7 +16,7 @@ const TariffCard = ({ title, price, features, image }) => (
     <div className="flex flex-col items-center p-6 ">
       <img className="w-56 h-56 mb-4 rounded-2xl" src={image} alt={title} />
       <h2 className="text-2xl font-bold   pb-2 mb-4">{title}</h2>
-      <ul className="space-y-2 text-xl text-left text-gray-700 list-disc pt-6 border-t-4 border-red-400">
+      <ul className="space-y-2 text-xl text-justify text-gray-700 list-disc pt-6 border-t-4 border-red-400">
         {features.map((feature, index) => (
           <li key={index}>{feature}</li>
         ))}
@@ -139,14 +139,14 @@ export default function ParrentsSittingCoursePage() {
     <>
       <Header />
 
-      <div className=" flex items-center flex-col-reverse gap-4 lg:flex-row py-20 px-4 lg:px-40 xl:px-80 justify-between">
+      <div className=" flex items-center flex-col-reverse gap-12 lg:flex-row py-20 px-4 lg:px-40 xl:px-80 justify-between">
         <div className="flex xl:items-start flex-col">
           <h2 className="text-4xl font-bold">Курс "Сажать нельзя ждать"</h2>
           <h1 className="text-2xl font-semibold mt-6">
             Помогите ребёнку сесть и поползти самостоятельно в комфортном для
             него темпе!
           </h1>
-          <p className="text-2xl mt-6">
+          <p className="text-2xl mt-6 text-justify">
             Научитесь поддерживать естественное развитие малыша без лишних
             девайсов и стрессов
           </p>
@@ -169,11 +169,11 @@ export default function ParrentsSittingCoursePage() {
         Вам точно нужен этот курс если
       </h2>
 
-      <div className="flex flex-col items-center lg:items-start lg:flex-row gap-4 justify-between mx-4 xl:mx-60">
+      <div className="text-justify flex flex-col items-center lg:items-start lg:flex-row gap-4 justify-between mx-4 xl:mx-60">
         {symptoms.map((item, index) => (
           <div key={index} className="flex flex-row gap-2">
             <CheckIcon />
-            <div className="w-full lg:w-64">
+            <div className="w-full lg:w-72">
               <h2 className="text-2xl font-bold">{item.title}</h2>
               <p className=" text-xl">{item.description}</p>
             </div>
@@ -181,11 +181,11 @@ export default function ParrentsSittingCoursePage() {
         ))}
       </div>
 
-      <div className="flex flex-col items-center my-20 py-10 px-4 sm:px-64 bg-cyan-400">
-        <h2 className="text-4xl font-bold pb-8">
+      <div className="text-justify flex flex-col items-center my-20 py-10 px-4 sm:px-64 bg-cyan-400">
+        <h2 className="text-4xl font-bold pb-8 ">
           Почему сидение это такой же важный навык, как и ползание?
         </h2>
-        <p className="text-xl font-bold sm:text-center pb-10">
+        <p className="text-xl font-bold  pb-10">
           На вебинаре с примерами и актуальными исследованиями разобрала, как и
           когда дети начинают сидеть — нормы и естественные сроки; признаки
           готовности малыша к самостоятельному сидению; почему ребёнок не
@@ -202,7 +202,7 @@ export default function ParrentsSittingCoursePage() {
         ></iframe>
       </div>
 
-      <div className="flex flex-col m-4 p-8 gap-8 lg:flex-row justify-around">
+      <div className="text-justify flex flex-col m-4 p-8 gap-8 lg:flex-row justify-around">
         <div class="grid grid-cols-2 grid-rows-2 gap-4 p-4 max-w-2xl mx-auto">
           <img
             src={course1}
@@ -267,14 +267,14 @@ export default function ParrentsSittingCoursePage() {
 
       <div className="px-4 xl:px-40 py-16">
         <h2 className="text-4xl font-bold text-center mb-12">Тарифы</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-4">
+        <div className=" grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-4">
           {tariffs.map((tariff, index) => (
             <TariffCard key={index} {...tariff} />
           ))}
         </div>
       </div>
 
-      <div className="mx-4 xl:mx-40 my-20 p-4 xl:p-10">
+      <div className="text-justify mx-4 xl:mx-40 my-20 p-4 xl:p-10">
         <h2 className="text-2xl xl:text-4xl font-bold text-center mb-8">
           Ответы на вопросы
         </h2>
