@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import introPic from "../assets/intro3.png";
 
 export default function Intro() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setIsVisible(true), 100);
+  }, []);
+
   return (
-    <div className="bg-[#F2bb03]">
+    <div
+      className={`bg-amber-300 transition-all duration-900 ease-out ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+      }`}
+    >
       <div className="px-4 xl:px-20">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="w-full lg:w-1/2 flex flex-col py-10 px-6 md:px-16 lg:px-10 xl:ml-20">
@@ -24,7 +34,11 @@ export default function Intro() {
             <img
               src={introPic}
               alt="Intro Pic"
-              className="w-full max-w-sm md:max-w-md lg:max-w-full"
+              className={`w-full max-w-sm md:max-w-md lg:max-w-full transition-all duration-900 ease-out ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-5"
+              }`}
             />
           </div>
         </div>

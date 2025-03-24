@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.jsx";
@@ -129,6 +128,12 @@ const faqs = [
   },
 ];
 export default function ParrentsSittingCoursePage() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setIsVisible(true), 100);
+  }, []);
+
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -139,7 +144,11 @@ export default function ParrentsSittingCoursePage() {
     <>
       <Header />
 
-      <div className=" flex items-center flex-col-reverse gap-12 lg:flex-row py-20 px-4 lg:px-40 xl:px-80 justify-between">
+      <div
+        className={`flex items-center flex-col-reverse gap-12 lg:flex-row py-20 px-4 lg:px-40 xl:px-80 justify-between transition-all duration-900 ease-out ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+        }`}
+      >
         <div className="flex xl:items-start flex-col">
           <h2 className="text-4xl font-bold">Курс "Сажать нельзя ждать"</h2>
           <h1 className="text-2xl font-semibold mt-6">

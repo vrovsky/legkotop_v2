@@ -216,7 +216,7 @@ export default function Courses() {
               openIndex === index ? "max-h-[2000px]" : "max-h-0"
             }`}
           >
-            <div className=" bg-gray-100 rounded-b-lg text-gray-800 px-4xl:px-40">
+            <div className=" bg-gray-100 rounded-b-lg text-gray-800 px-4 xl:px-30">
               {course.content}
             </div>
           </div>

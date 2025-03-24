@@ -75,7 +75,7 @@ export default function Lections() {
                   {/* <h3 className="text-lg font-semibold mb-2">
                     {lecture.title}
                   </h3> */}
-                  <button className="w-full rounded-xl h-10 bg-blue-400 text-white hover:bg-blue-600 transition ease-in-out duration-400">
+                  <button className="w-full rounded-xl h-11 bg-blue-400 text-white hover:bg-blue-600 transition ease-in-out duration-400">
                     Купить
                   </button>
                 </div>
