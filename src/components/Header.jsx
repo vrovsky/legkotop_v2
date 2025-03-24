@@ -25,9 +25,8 @@ export default function Header() {
           <img
             src={logo}
             alt="Legko_top"
-            className="w-30 xl:w-40 ml-4 xl:ml-8"
+            className="w-20 xl:w-30 ml-4 xl:ml-8"
           />
-          {/* <div className="text-3xl font-bold ">Legko_Top</div> */}
         </Link>
       </header>
     </>

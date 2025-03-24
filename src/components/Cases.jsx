@@ -36,7 +36,7 @@ export default function Cases() {
   };
 
   return (
-    <div className="w-full bg-[#4da5a7] py-10 px-10">
+    <div className="w-full bg-[#6aa9aa] py-10 px-10">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl mb-8 font-bold text-center">
           Кейсы наших клиентов

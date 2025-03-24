@@ -8,27 +8,27 @@ import arrowRight from "../assets/arrowRight.svg";
 const lectures = [
   {
     title: "Норма и отклонение от нормы в развитии детей 0-18 мес",
-    image: "/images/lecture1.jpg",
+    image: "../../public/lectures/lecture1.jpg",
   },
   {
     title: "Полезные и бесполезные девайсы",
-    image: "/images/lecture2.jpg",
+    image: "../../public/lectures/lecture2.jpg",
   },
   {
     title: "Нет опоры на ручки! Что делать?",
-    image: "/images/lecture3.jpg",
+    image: "../../public/lectures/lecture3.jpg",
   },
   {
     title: "Коррекция асимметрий у детей 0-10 мес",
-    image: "/images/lecture4.jpg",
+    image: "../../public/lectures/lecture4.jpg",
   },
   {
     title: "Сажать нельзя ждать",
-    image: "/images/lecture5.jpg",
+    image: "../../public/lectures/lecture5.jpg",
   },
   {
     title: "Первые шаги: до и после",
-    image: "/images/lecture6.jpg",
+    image: "../../public/lectures/lecture6.jpg",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function Lections() {
   };
 
   return (
-    <div className="w-full bg-amber-300 py-10 px-10">
+    <div className="w-full bg-blue-100 py-10 px-10">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-center text-2xl xl:text-4xl mb-8 font-bold">
           Доступные лекции
@@ -65,17 +65,17 @@ export default function Lections() {
         <Slider {...settings}>
           {lectures.map((lecture, index) => (
             <div key={index} className="px-2">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                {/* <img
+              <div className="rounded-lg shadow-lg overflow-hidden">
+                <img
                   src={lecture.image}
                   alt={lecture.title}
-                  className="w-full h-64 object-cover"
-                /> */}
+                  className="w-full h-52 md:h-64 xl:h-76 object-cover rounded-3xl"
+                />
                 <div className="p-4 text-center">
-                  <h3 className="text-lg font-semibold mb-2">
+                  {/* <h3 className="text-lg font-semibold mb-2">
                     {lecture.title}
-                  </h3>
-                  <button className="w-full h-10 bg-blue-500 text-white hover:bg-blue-600">
+                  </h3> */}
+                  <button className="w-full rounded-xl h-10 bg-blue-400 text-white hover:bg-blue-600 transition ease-in-out duration-400">
                     Купить
                   </button>
                 </div>
@@ -93,9 +93,9 @@ function CustomNextArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute right-[-45px] xl:right-[-55px] top-1/2 transform -translate-y-1/2  w-12 h-12 flex items-center rounded-full  hover:bg-green-400 transition ease-in-out duration-400"
+      className="absolute right-[-45px] xl:right-[-45px] top-1/2 transform -translate-y-1/2  w-10 h-10 flex items-center rounded-full  hover:bg-blue-400 transition ease-in-out duration-400"
     >
-      <img src={arrowRight} className="w-24 h-24" alt="arrow-right" />
+      <img src={arrowRight} className="w-20 h-20 " alt="arrow-right" />
     </button>
   );
 }
@@ -105,11 +105,11 @@ function CustomPrevArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute left-[-45px] xl:left-[-55px] top-1/2 transform -translate-y-1/2 w-12 h-12 flex items-center rounded-full  hover:bg-green-400 transition ease-in-out duration-400"
+      className="absolute left-[-45px] xl:left-[-45spx] top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center rounded-full  hover:bg-green-400 transition ease-in-out duration-400"
     >
       <img
         src={arrowRight}
-        className="transform rotate-180 w-24 h-24"
+        className="transform rotate-180 w-20 h-20"
         alt="arrow-right"
       />
     </button>
