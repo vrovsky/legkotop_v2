@@ -64,8 +64,8 @@ export default function Lections() {
         </h2>
         <Slider {...settings}>
           {lectures.map((lecture, index) => (
-            <div key={index} className="px-2">
-              <div className="rounded-lg shadow-lg overflow-hidden">
+            <div key={index} className="px-4">
+              <div className="rounded-lg overflow-hidden">
                 <img
                   src={lecture.image}
                   alt={lecture.title}
