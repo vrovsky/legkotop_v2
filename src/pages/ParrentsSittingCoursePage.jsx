@@ -145,7 +145,7 @@ export default function ParrentsSittingCoursePage() {
       <Header />
 
       <div
-        className={`flex items-center flex-col-reverse gap-12 lg:flex-row py-20 px-4 lg:px-40 xl:px-80 justify-between transition-all duration-900 ease-out ${
+        className={`flex items-center flex-col-reverse gap-12 lg:flex-row py-20 px-4 lg:px-40 xl:px-60 justify-between transition-all duration-900 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
         }`}
       >

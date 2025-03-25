@@ -57,10 +57,10 @@ export default function Lections() {
   };
 
   return (
-    <div className="w-full bg-blue-100 py-10 px-10">
+    <div className="w-full bg-amber-200 py-10 px-10">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-center text-2xl xl:text-4xl mb-8 font-bold">
-          Доступные лекции
+          Лекции
         </h2>
         <Slider {...settings}>
           {lectures.map((lecture, index) => (
@@ -75,7 +75,7 @@ export default function Lections() {
                   {/* <h3 className="text-lg font-semibold mb-2">
                     {lecture.title}
                   </h3> */}
-                  <button className="w-full rounded-xl h-11 bg-blue-400 text-white hover:bg-blue-600 transition ease-in-out duration-400">
+                  <button className="w-full rounded-xl h-11 bg-blue-400 text-white hover:bg-blue-500 transition ease-in-out duration-400">
                     Купить
                   </button>
                 </div>
@@ -93,7 +93,7 @@ function CustomNextArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute right-[-45px] xl:right-[-45px] top-1/2 transform -translate-y-1/2  w-10 h-10 flex items-center rounded-full  hover:bg-blue-400 transition ease-in-out duration-400"
+      className="absolute right-[-45px] xl:right-[-45px] top-1/2 transform -translate-y-1/2  w-10 h-10 flex items-center rounded-full  hover:bg-blue-200 transition ease-in-out duration-400"
     >
       <img src={arrowRight} className="w-20 h-20 " alt="arrow-right" />
     </button>
@@ -105,7 +105,7 @@ function CustomPrevArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute left-[-45px] xl:left-[-45spx] top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center rounded-full  hover:bg-green-400 transition ease-in-out duration-400"
+      className="absolute left-[-45px] xl:left-[-45spx] top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center rounded-full  hover:bg-blue-200 transition ease-in-out duration-400"
     >
       <img
         src={arrowRight}

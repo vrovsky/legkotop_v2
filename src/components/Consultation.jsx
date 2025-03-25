@@ -68,11 +68,13 @@ export default function Consultation() {
           </li>
         </ul>
 
-        <p className="text-base sm:text-xl font-bold">Стоимость: 100 евро</p>
+        <p className="xl:ml-10 text-base sm:text-xl font-bold">
+          Стоимость: 100 евро
+        </p>
 
         <Link
           to="/consultation"
-          className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg 
+          className="ml-6 md:ml-80 xl:ml-19 inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg 
                     text-lg shadow-md transition-all"
         >
           Хочу на консультацию
