@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
-import Cases from "../components/Cases.jsx";
+import Header from "../components/Header.tsx";
+import Footer from "../components/Footer.tsx";
+import Cases from "../components/Cases.tsx";
 
 import tatyana3 from "../assets/tatyana3.png";
-import course1 from "../assets/course1.png";
+import course1 from "../assets/sitingCourseBasic.png";
 import course2 from "../assets/course2.png";
 import course3 from "../assets/course3.png";
 import course4 from "../assets/course4.png";
 
-const TariffCard = ({ title, price, features, image }) => (
+const TariffCard = ({ title, price, features, image, href }) => (
   <div className="flex flex-col items-center justify-between rounded-3xl shadow-xl pb-4">
     <div className="flex flex-col items-center p-6 ">
-      <img className="w-56 h-56 mb-4 rounded-2xl" src={image} alt={title} />
+      {/* w-72 if different */}
+      <img className=" mb-4 rounded-2xl" src={image} alt={title} />
       <h2 className="text-2xl font-bold   pb-2 mb-4">{title}</h2>
       <ul className="space-y-2 text-xl text-justify text-gray-700 list-disc pt-6 border-t-4 border-red-400">
         {features.map((feature, index) => (
@@ -21,9 +22,14 @@ const TariffCard = ({ title, price, features, image }) => (
         ))}
       </ul>
     </div>
-    <button className="mt-6 text-lg bg-red-400 px-6 py-2 hover:bg-red-500 text-white font-bold rounded-lg transition duration-300">
-      {price} EUR
-    </button>
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <button
+        className="mt-6 text-lg bg-red-400 px-6 py-2 hover:bg-red-500 
+    text-white font-bold rounded-lg transition duration-300"
+      >
+        {price} EUR
+      </button>
+    </a>
   </div>
 );
 
@@ -66,7 +72,7 @@ const symptoms = [
 const tariffs = [
   {
     title: "Базовый",
-    price: 40,
+    price: 50,
     features: [
       "Вебинар с теоретической базой",
       "4 блока упражнений для детей с разной степенью готовности к сидению",
@@ -74,6 +80,7 @@ const tariffs = [
       "Доступ навсегда",
     ],
     image: course1,
+    href: "https://secure.wayforpay.com/button/bb51e1db96b9b",
   },
   {
     title: "Индивидуальный для родителей",
@@ -87,6 +94,7 @@ const tariffs = [
       "Обратная связь от Татьяна Трубы в течение 2 недель",
     ],
     image: course2,
+    href: "https://secure.wayforpay.com/button/b1ad7670a3e74",
   },
   {
     title: "Супервизия для специалистов",
@@ -100,6 +108,7 @@ const tariffs = [
       "Обратная связь от Татьяна Трубы в течение 3 месяцев",
     ],
     image: course3,
+    href: "https://secure.wayforpay.com/button/ba0d97c352678",
   },
 ];
 

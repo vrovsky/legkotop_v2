@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
+import Header from "../components/Header.tsx";
+import Footer from "../components/Footer.tsx";
 
 export default function ParrentsHandlingCoursePage() {
   return (

@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const courses = [
@@ -203,7 +202,10 @@ export default function Courses() {
         Курсы
       </div>
       {courses.map((course, index) => (
-        <div key={index} className="transition all duration-300 ease-in-out">
+        <div
+          key={index}
+          className="transition all duration-300 ease-in-out overflow-x-hidden"
+        >
           <button
             className={`w-full text-left text-white text-2xl sm:text-4xl py-6 sm:py-10 px-4 xl:px-40 transition-all duration-300 ease-in-out
                         bg-gradient-to-r ${course.gradient} hover:brightness-120`}

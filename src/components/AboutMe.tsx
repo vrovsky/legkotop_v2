@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function AboutMe() {
   return (
     <div className="py-4 sm:py-10 px-4 xl:px-40 text-justify text-[#3c62c9]">

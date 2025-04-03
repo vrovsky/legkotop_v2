@@ -1,31 +1,13 @@
 import React, { useState, useEffect } from "react";
-
-import Header from "../components/Header.jsx";
-import Footer from "../components/Footer.jsx";
-import Cases from "../components/Cases.jsx";
+import Header from "../components/Header.tsx";
+import Footer from "../components/Footer.tsx";
+import Cases from "../components/Cases.tsx";
 
 import tatyana3 from "../assets/tatyana3.png";
 import course1 from "../assets/course1.png";
 import course2 from "../assets/course2.png";
 import course3 from "../assets/course3.png";
 import course4 from "../assets/course4.png";
-
-const TariffCard = ({ title, price, features, image }) => (
-  <div className="flex flex-col items-center justify-between rounded-3xl shadow-xl pb-4">
-    <div className="flex flex-col items-center p-6 ">
-      <img className="w-56 h-56 mb-4 rounded-2xl" src={image} alt={title} />
-      <h2 className="text-2xl font-bold   pb-2 mb-4">{title}</h2>
-      <ul className="space-y-2 text-xl text-left text-gray-700 list-disc pt-6 border-t-4 border-red-400">
-        {features.map((feature, index) => (
-          <li key={index}>{feature}</li>
-        ))}
-      </ul>
-    </div>
-    <button className="mt-6 text-lg bg-red-400 px-6 py-2 hover:bg-red-500 text-white font-bold rounded-lg transition duration-300">
-      {price} EUR
-    </button>
-  </div>
-);
 
 const CheckIcon = () => (
   <svg
@@ -43,6 +25,23 @@ const CheckIcon = () => (
       />
     </g>
   </svg>
+);
+
+const TariffCard = ({ title, price, features, image }) => (
+  <div className="flex flex-col items-center justify-between rounded-3xl shadow-xl pb-4">
+    <div className="flex flex-col items-center p-6 ">
+      <img className="w-56 h-56 mb-4 rounded-2xl" src={image} alt={title} />
+      <h2 className="text-2xl font-bold   pb-2 mb-4">{title}</h2>
+      <ul className="space-y-2 text-xl text-left text-gray-700 list-disc pt-6 border-t-4 border-red-400">
+        {features.map((feature, index) => (
+          <li key={index}>{feature}</li>
+        ))}
+      </ul>
+    </div>
+    <button className="mt-6 text-lg bg-red-400 px-6 py-2 hover:bg-red-500 text-white font-bold rounded-lg transition duration-300">
+      {price} EUR
+    </button>
+  </div>
 );
 
 const symptoms = [

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import introPic from "../assets/intro3.png";
+import introPic from "../assets/tatyanaP.png";
 
 export default function Intro() {
   const [isVisible, setIsVisible] = useState(false);

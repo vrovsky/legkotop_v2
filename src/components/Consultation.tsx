@@ -1,6 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import tatyanaPhoto from "../assets/tatyana.png"; // Убедитесь, что путь к фото правильный
+import tatyanaPhoto from "../assets/tatyana.png";
 
 export default function Consultation() {
   return (

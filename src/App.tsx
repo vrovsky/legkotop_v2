@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import HomePage from "./pages/HomePage.jsx";
-import ConsultationPage from "./pages/ConsultationPage.jsx";
-import ParentsCorrectionCoursePage from "./pages/ParentsCorrectionCoursePage.jsx";
-import ParrentsSittingCoursePage from "./pages/ParrentsSittingCoursePage.jsx";
-import ParrentsHandlingCoursePage from "./pages/ParrentsHandlingCoursePage.jsx";
-import SpecialistsCoursePage from "./pages/SpecialistsCoursePage.jsx";
+import HomePage from "./pages/HomePage.tsx";
+import ConsultationPage from "./pages/ConsultationPage.tsx";
+import ParentsCorrectionCoursePage from "./pages/ParentsCorrectionCoursePage.tsx";
+import ParrentsSittingCoursePage from "./pages/ParrentsSittingCoursePage.tsx";
+import ParrentsHandlingCoursePage from "./pages/ParrentsHandlingCoursePage.tsx";
+import SpecialistsCoursePage from "./pages/SpecialistsCoursePage.tsx";
 
 function App() {
   return (
