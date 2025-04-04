@@ -36,7 +36,7 @@ export default function Cases() {
   };
 
   return (
-    <div className="w-full bg-[#6aa9aa] py-10 px-10">
+    <div className="w-full bg-amber-300 py-10 px-10">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl mb-8 font-bold text-center">
           Кейсы наших клиентов
@@ -65,9 +65,9 @@ function CustomNextArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute right-[-30px] xl:right-[-70px] top-1/2 transform -translate-y-1/2  w-12 h-12 flex items-center rounded-full  hover:bg-green-400 transition ease-in-out duration-400"
+      className="absolute right-[-45px] xl:right-[-45px] top-1/2 transform -translate-y-1/2  w-10 h-10 flex items-center rounded-full hover:bg-blue-200 transition ease-in-out duration-300"
     >
-      <img src={arrowRight} className="w-24 h-24" alt="arrow-right" />
+      <img src={arrowRight} className="w-20 h-20 " alt="arrow-right" />
     </button>
   );
 }
@@ -77,11 +77,11 @@ function CustomPrevArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute left-[-30px] xl:left-[-70px] top-1/2 transform -translate-y-1/2 w-12 h-12 flex items-center rounded-full  hover:bg-green-400 transition ease-in-out duration-400"
+      className="absolute left-[-45px] xl:left-[-45spx] top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center rounded-full  hover:bg-blue-200 transition ease-in-out duration-300"
     >
       <img
         src={arrowRight}
-        className="transform rotate-180 w-24 h-24"
+        className="transform rotate-180 w-20 h-20"
         alt="arrow-right"
       />
     </button>
