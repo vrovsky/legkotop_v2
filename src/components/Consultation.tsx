@@ -8,7 +8,7 @@ export default function Consultation() {
         <img
           src={tatyanaPhoto}
           alt="Татьяна Труба"
-          className="w-64 lg:w-80 object-contain"
+          className="w-64 lg:w-80 object-contain brightness-110"
         />
       </div>
 
@@ -68,15 +68,16 @@ export default function Consultation() {
         </ul>
 
         <p className="text-base sm:text-xl font-bold">Стоимость: 100 евро</p>
-
-        <Link
-          to="/consultation"
-          className="text-lg bg-orange-500
-           hover:bg-orange-600 text-white
-            font-bold py-4 px-8 rounded-lg shadow-md transition-all"
-        >
-          Хочу на консультацию
-        </Link>
+        <button>
+          <Link
+            to="/consultation"
+            className="text-lg bg-orange-500
+          hover:bg-orange-600 text-white
+          font-bold py-4 px-8 rounded-lg shadow-md transition-all"
+          >
+            Хочу на консультацию
+          </Link>
+        </button>
       </div>
     </div>
   );

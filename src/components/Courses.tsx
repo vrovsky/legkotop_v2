@@ -42,15 +42,17 @@ const courses = [
           <strong>окно обратной связи</strong> с ответами на вопросы.
         </p>
         <p className="font-semibold">Доступ навсегда!</p>
-        <Link
-          to="/correction-course"
-          // href="https://legkotopcorrection.wayforpay.shop/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full sm:w-2xl text-center bg-[#F9291F] hover:bg-[#F2BB03]  text-white font-bold py-3 rounded-lg transition-all duration-300"
-        >
-          Хочу на курс!
-        </Link>
+        <button>
+          <Link
+            to="/correction-course"
+            // href="https://legkotopcorrection.wayforpay.shop/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full sm:w-2xl text-center bg-[#F9291F] hover:bg-[#F2BB03]  text-white font-bold py-3 rounded-lg transition-all duration-300"
+          >
+            Хочу на курс!
+          </Link>
+        </button>
       </div>
     ),
     gradient: "from-[#F9291F] to-[#F2BB03]",
@@ -90,15 +92,17 @@ const courses = [
           <strong>от меня лично</strong>.
         </p>
         <div className="pt-4">
-          <Link
-            to="/sitting-course"
-            // href="https://example.com/payment-link2"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full sm:w-2xl text-center bg-[#0073d9] hover:bg-blue-400 text-white font-bold py-3 rounded-lg transition-all duration-300"
-          >
-            Хочу на курс!
-          </Link>
+          <button>
+            <Link
+              to="/sitting-course"
+              // href="https://example.com/payment-link2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full sm:w-2xl text-center bg-[#0073d9] hover:bg-blue-400 text-white font-bold py-3 rounded-lg transition-all duration-300"
+            >
+              Хочу на курс!
+            </Link>
+          </button>
         </div>
       </div>
     ),
@@ -118,15 +122,17 @@ const courses = [
           <strong>Курс-практикум "Основы хендлинга для мам"!</strong>
         </p>
         <div className="pt-4">
-          <Link
-            // href="https://secure.wayforpay.com/payment/se8e29f6d04ee"
-            to="/handling-course"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full sm:w-2xl text-center bg-green-600 hover:bg-lime-400 text-white font-bold py-3 rounded-lg transition-all duration-300"
-          >
-            Хочу на курс!
-          </Link>
+          <button>
+            <Link
+              // href="https://secure.wayforpay.com/payment/se8e29f6d04ee"
+              to="/handling-course"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full sm:w-2xl text-center bg-green-600 hover:bg-lime-400 text-white font-bold py-3 rounded-lg transition-all duration-300"
+            >
+              Хочу на курс!
+            </Link>
+          </button>
         </div>
       </div>
     ),
@@ -174,15 +180,17 @@ const courses = [
         </ul>
 
         <div className="pt-4">
-          <Link
-            // href="https://secure.wayforpay.com/payment/sc9a241e72963"
-            to="/specialists-course"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full sm:w-2xl text-center bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 rounded-lg transition-all duration-300"
-          >
-            Хочу на курс!
-          </Link>
+          <button>
+            <Link
+              // href="https://secure.wayforpay.com/payment/sc9a241e72963"
+              to="/specialists-course"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full sm:w-2xl text-center bg-purple-500 hover:bg-purple-600 text-white font-bold py-3 rounded-lg transition-all duration-300"
+            >
+              Хочу на курс!
+            </Link>
+          </button>
         </div>
       </div>
     ),
@@ -230,15 +238,17 @@ const courses = [
         </ul>
 
         <div className="pt-4">
-          <Link
-            // href="https://secure.wayforpay.com/payment/sc9a241e72963"
-            to="/specialists-course"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full sm:w-2xl text-center bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 rounded-lg transition-all duration-300"
-          >
-            Хочу на курс!
-          </Link>
+          <button>
+            <Link
+              // href="https://secure.wayforpay.com/payment/sc9a241e72963"
+              to="/specialists-course"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full sm:w-2xl text-center bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 rounded-lg transition-all duration-300"
+            >
+              Хочу на курс!
+            </Link>
+          </button>
         </div>
       </div>
     ),

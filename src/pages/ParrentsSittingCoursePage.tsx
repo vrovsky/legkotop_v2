@@ -20,7 +20,7 @@ const TariffCard = ({ title, price, features, image, href }) => (
         alt={title}
       />
       <h2 className="text-xl font-bold  pb-2 mb-4">{title}</h2>
-      <ul className="space-y-2 text-xl text-justify text-gray-700 list-disc pt-6 border-t-4 border-red-400">
+      <ul className="space-y-2 text-xl pl-4 text-justify text-gray-700 list-disc pt-6 border-t-4 border-amber-300">
         {features.map((feature, index) => (
           <li key={index}>{feature}</li>
         ))}
@@ -28,7 +28,7 @@ const TariffCard = ({ title, price, features, image, href }) => (
     </div>
     <a href={href} target="_blank" rel="noopener noreferrer">
       <button
-        className="mt-6 text-lg bg-red-400 px-6 py-2 hover:bg-red-500 
+        className="mt-6 text-lg bg-amber-600 px-6 py-2 hover:bg-amber-500 
     text-white font-bold rounded-lg transition duration-300"
       >
         {price} EUR

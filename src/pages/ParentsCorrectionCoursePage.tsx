@@ -28,17 +28,17 @@ const CheckIcon = () => (
 );
 
 const TariffCard = ({ title, price, features, image }) => (
-  <div className="flex flex-col items-center justify-between rounded-3xl shadow-xl pb-4">
+  <div className="flex flex-col items-center text-center justify-between rounded-3xl shadow-xl pb-4">
     <div className="flex flex-col items-center p-6 ">
       <img className="w-56 h-56 mb-4 rounded-2xl" src={image} alt={title} />
-      <h2 className="text-xl justify-end font-bold pb-2 mb-4">{title}</h2>
-      <ul className="space-y-2 text-xl text-left text-gray-700 list-disc pt-6 border-t-4 border-red-400">
+      <h2 className="text-xl font-bold pb-2 mb-4">{title}</h2>
+      <ul className="space-y-2 text-xl text-left text-gray-700 list-disc pl-4 pt-6 border-t-4 border-amber-300">
         {features.map((feature, index) => (
           <li key={index}>{feature}</li>
         ))}
       </ul>
     </div>
-    <button className="mt-6 text-lg bg-red-400 px-6 py-2 hover:bg-red-500 text-white font-bold rounded-lg transition duration-300">
+    <button className="mt-6 text-lg bg-amber-600 px-6 py-2 hover:bg-amber-500 text-white font-bold rounded-lg transition duration-300">
       {price} EUR
     </button>
   </div>
@@ -64,8 +64,8 @@ const symptoms = [
 
 const tariffs = [
   {
-    title: "Базовый",
-    price: 40,
+    title: "Базовый без сопровождения для родителей",
+    price: 50,
     features: [
       "Вебинар с теоретической базой",
       "4 блока упражнений для детей разного возраста и разных видов асимметрий",
@@ -75,7 +75,7 @@ const tariffs = [
     image: course1,
   },
   {
-    title: "Индивидуальный для родителей",
+    title: "С сопровождением для родителей",
     price: 70,
     features: [
       "Индивидуальное тестирование и определение причин асимметрии вашего ребенка",

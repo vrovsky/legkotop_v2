@@ -60,9 +60,11 @@
 h1,
 h2,
 p,
-li,
-span {
+li {
   color: #3c62c9;
+}
+button:active {
+  transform: scale(0.9);
 }
 
 .dark {

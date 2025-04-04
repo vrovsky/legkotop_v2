@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import introPic from "../assets/tatyanaP.png";
+// import yellowcircle from "../assets/yellowcircle.svg";
 
 export default function Intro() {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,10 +32,18 @@ export default function Intro() {
           </div>
 
           <div className="w-full lg:w-1/3 flex justify-center">
+            {/* <img
+              src={yellowcircle}
+              className="absolute z-0 w-1/4 ml-100 mt-20"
+            ></img>
+            <img
+              src={yellowcircle}
+              className="absolute z-10 w-1/4 ml-40 mt-60"
+            ></img> */}
             <img
               src={introPic}
               alt="Intro Pic"
-              className={`w-full max-w-sm md:max-w-md lg:max-w-full transition-all duration-900 ease-out ${
+              className={`relative z-20 w-full max-w-sm md:max-w-md lg:max-w-full ${
                 isVisible
                 // ? "opacity-100 translate-x-0"
                 // : "opacity-0 translate-x-5"

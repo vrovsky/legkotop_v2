@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo3.png";
 
@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={`sticky top-0 bg-white z-10 shadow-md transition-all duration-300 ease-in-out ${
+        className={`sticky top-0 bg-white z-40 shadow-md transition-all duration-300 ease-in-out ${
           isScrolled ? "py-2" : "py-4"
         }`}
       >
@@ -25,7 +25,7 @@ export default function Header() {
           <img
             src={logo}
             alt="Legko_top"
-            className="w-20 xl:w-30 ml-4 xl:ml-8"
+            className="w-20 xl:w-28 ml-4 xl:ml-8"
           />
         </Link>
       </header>
