@@ -14,7 +14,7 @@ const CheckIcon = () => (
     role="img"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
-    className="w-10 h-10"
+    className="w-8 h-8"
   >
     <g fill="orange">
       <path d="M10.243 16.314L6 12.07l1.414-1.414l2.829 2.828l5.656-5.657l1.415 1.415z" />
@@ -31,7 +31,7 @@ const TariffCard = ({ title, price, features, image }) => (
   <div className="flex flex-col items-center justify-between rounded-3xl shadow-xl pb-4">
     <div className="flex flex-col items-center p-6 ">
       <img className="w-56 h-56 mb-4 rounded-2xl" src={image} alt={title} />
-      <h2 className="text-2xl font-bold   pb-2 mb-4">{title}</h2>
+      <h2 className="text-xl justify-end font-bold pb-2 mb-4">{title}</h2>
       <ul className="space-y-2 text-xl text-left text-gray-700 list-disc pt-6 border-t-4 border-red-400">
         {features.map((feature, index) => (
           <li key={index}>{feature}</li>
@@ -145,19 +145,19 @@ export default function ParentsCorrectionCoursePage() {
       <Header />
 
       <div
-        className={`flex items-center flex-col-reverse gap-12 lg:flex-row py-20 px-4 lg:px-40 xl:px-80 justify-betweentransition-all duration-900 ease-out ${
+        className={` bg-amber-300  flex items-center flex-col-reverse gap-12 lg:flex-row py-20 px-4 lg:px-40 xl:px-80 justify-betweentransition-all duration-900 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
         }`}
       >
         <div className="flex xl:items-start flex-col">
-          <h2 className="text-4xl font-bold ">
+          <h2 className="text-3xl font-bold ">
             Курс "Коррекция Асимметрий у Детей"
           </h2>
-          <h1 className="text-2xl font-semibold mt-6 text-justify">
+          <h1 className="text-xl font-semibold mt-6 text-justify">
             Помогите своему ребенку активно и симметрично двигаться в первый год
             жизни, чтобы обеспечить ему хорошую осанку в будущем
           </h1>
-          <p className="text-2xl mt-6">Авторская методика Татьяны Трубы</p>
+          <p className="text-xl mt-6">Авторская методика Татьяны Трубы</p>
           <button className="text-xl bg-red-400 px-24 py-2 hover:bg-red-500 text-white transition-all duration-800 ease-in-out font-bold rounded mt-8">
             Хочу на курс!
           </button>
@@ -172,27 +172,27 @@ export default function ParentsCorrectionCoursePage() {
           </div>
         </div>
       </div>
-      <h2 className="text-4xl font-bold text-center mt-30 mb-10">
+      <h2 className="text-3xl font-bold text-center mt-20 mb-10">
         Вам точно нужен этот курс, если вы видите, что у ребенка
       </h2>
 
-      <div className="flex flex-col items-center lg:items-start lg:flex-row gap-4 justify-between mx-4 xl:mx-60">
+      <div className="flex flex-col items-center lg:items-start lg:flex-row gap-20 justify-between mx-4 xl:mx-44">
         {symptoms.map((item, index) => (
           <div key={index} className="flex flex-row gap-2">
             <CheckIcon />
             <div className="w-full lg:w-64">
-              <h2 className="text-2xl font-bold">{item.title}</h2>
-              <p className=" text-xl text-justify">{item.description}</p>
+              <h2 className="text-xl font-bold">{item.title}</h2>
+              <p className=" text-lg text-justify">{item.description}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="flex flex-col items-center my-20 py-10 px-4 sm:px-64 bg-cyan-400">
-        <h2 className="text-4xl font-bold pb-8">
+      <div className="flex flex-col items-center my-20 py-10 px-4 sm:px-64 bg-cyan-200">
+        <h2 className="text-3xl font-bold pb-8">
           Как асимметрия в первый год жизни влияет на осанку в будущем?
         </h2>
-        <p className="text-xl font-bold sm:text-center pb-10">
+        <p className="text-lg font-bold sm:text-center pb-10">
           На вебинаре дала базу о влиянии асимметрий на развитие всего
           организма, причины и последствия врожденных и установочных асимметрий
           у детей
@@ -209,42 +209,42 @@ export default function ParentsCorrectionCoursePage() {
       </div>
 
       <div className="flex flex-col m-4 p-8 gap-8 lg:flex-row justify-around">
-        <div class="grid grid-cols-2 grid-rows-2 gap-4 p-4 max-w-2xl mx-auto">
+        <div className="grid grid-cols-2 grid-rows-2 gap-4 p-4 max-w-2xl mx-auto">
           <img
             src={course1}
-            class="col-span-1 row-span-2 rounded-2xl shadow-xl"
+            className="col-span-1 row-span-2 rounded-2xl shadow-xl"
           />
-          <img src={course2} class="rounded-2xl shadow-xl" />
-          <div class="grid grid-cols-2 gap-4">
-            <img src={course3} class="rounded-2xl shadow-xl" />
-            <img src={course4} class="rounded-2xl shadow-xl" />
+          <img src={course2} className="rounded-2xl shadow-xl" />
+          <div className="grid grid-cols-2 gap-4">
+            <img src={course3} className="rounded-2xl shadow-xl" />
+            <img src={course4} className="rounded-2xl shadow-xl" />
           </div>
         </div>
         <div className="pr-4 xl:pr-40 text-justify">
-          <h2 className="text-2xl sm:text-4xl text-start lg:text-justify font-bold ">
+          <h2 className="text-xl sm:text-3xl text-start lg:text-justify font-bold ">
             Вы можете самостоятельно исправить асимметрию у своего ребенка!
           </h2>
-          <p className="text-lg sm:text-2xl mt-6">
+          <p className="text-lg sm:text-xl mt-6">
             Это настолько эффективно, что даже специалисты с большим опытом
             работы пишут восторженные отзывы!
           </p>
-          <p className="text-lg sm:text-2xl mt-6">
+          <p className="text-lg sm:text-xl mt-6">
             На коррекцию асимметрии обычно уходит от 2 до 4 недель, если вы
             четко понимаете причины, которые повлияли на ее формирование и
             делаете соответствующие упражнения регулярно. Все просто, логично и
             интуитивно понятно!
           </p>
-          <p className="text-lg sm:text-2xl mt-6 font-bold">
+          <p className="text-lg sm:text-xl mt-6 font-bold">
             Для этого у вас будет вебинар с теорией и 4 блока упражнений с
             подробным описанием техники выполнения.
           </p>
-          <p className="text-lg sm:text-2xl mt-6">
+          <p className="text-lg sm:text-xl mt-6">
             У моих клиентов зачастую получается справиться самостоятельно. Но
             бывают ситуации, когда я рекомендую дополнительно обращаться к
             ортопеду, остеопату или кинезиологу, чтобы провести исследования или
             откорректировать компенсации возникшие в теле ребен
           </p>
-          <p className="text-lg sm:text-2xl mt-6">
+          <p className="text-lg sm:text-xl mt-6">
             Для сложных случаев асимметрии на курсе предусмотрено{" "}
             <strong>окно обратной связи с ответами на вопросы</strong>.
           </p>
@@ -257,7 +257,7 @@ export default function ParentsCorrectionCoursePage() {
       <Cases />
 
       <div className="px-4 xl:px-40 py-16 ">
-        <h2 className="text-4xl font-bold text-center mb-12">Тарифы</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">Тарифы</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-4">
           {tariffs.map((tariff, index) => (
             <TariffCard key={index} {...tariff} />
@@ -266,7 +266,7 @@ export default function ParentsCorrectionCoursePage() {
       </div>
 
       <div className="mx-4 xl:mx-40 my-20 p-4 xl:p-10">
-        <h2 className="text-2xl xl:text-4xl font-bold text-center mb-8">
+        <h2 className="text-xl xl:text-3xl font-bold text-center mb-8">
           Ответы на вопросы
         </h2>
         <div className="space-y-4">
@@ -274,7 +274,7 @@ export default function ParentsCorrectionCoursePage() {
             <div key={index} className="border-b border-gray-300">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left flex justify-between items-center text-lg xl:text-2xl font-semibold p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition"
+                className="w-full text-left flex justify-between items-center text-lg xl:text-xl font-semibold p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition"
               >
                 {faq.question}
                 <span
@@ -290,7 +290,7 @@ export default function ParentsCorrectionCoursePage() {
                   openIndex === index ? "max-h-[1000px]" : "max-h-0"
                 }`}
               >
-                <div className="p-4 text-lg xl:text-2xl text-semibold text-gray-700  text-justify">
+                <div className="p-4 text-lg xl:text-xl text-semibold text-gray-700  text-justify">
                   {faq.answer}
                 </div>
               </div>

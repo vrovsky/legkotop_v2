@@ -38,7 +38,7 @@ export default function Cases() {
   return (
     <div className="w-full bg-amber-300 py-10 px-10">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl mb-8 font-bold text-center">
+        <h2 className="text-3xl mb-8 font-bold text-center">
           Кейсы наших клиентов
         </h2>
         <Slider {...settings}>
