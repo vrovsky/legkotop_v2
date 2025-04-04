@@ -70,8 +70,8 @@ export default function Reviews() {
   };
 
   return (
-    <div className="w-full py-10 bg-gray-100 px-4 sm:px-40">
-      <h2 className="text-4xl font-bold mb-6">Отзывы</h2>
+    <div className="w-full py-6 bg-gray-100 px-4 sm:px-40">
+      <h2 className="text-2xl font-bold">Отзывы</h2>
       <div className="mx-auto">
         <Slider {...settings}>
           {reviews.map((review, index) => (

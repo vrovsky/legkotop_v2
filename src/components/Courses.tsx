@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const courses = [
   {
     title: 'Курс для родителей "Коррекция Асимметрий у Детей"',
     content: (
-      <div className="space-y-4 px-4 sm:px-10 py-4 text-lg sm:text-2xl">
+      <div className="space-y-4 px-4 sm:px-10 py-4 text-lg sm:text-xl">
         <p>
           Вам нужен этот курс, если вы видите, что у ребенка были и/или есть:
         </p>
@@ -58,7 +58,7 @@ const courses = [
   {
     title: 'Курс для родителей "Сажать Нельзя Ждать"',
     content: (
-      <div className="space-y-4 px-4 sm:px-10 py-4 text-lg sm:text-2xl">
+      <div className="space-y-4 px-4 sm:px-10 py-4 text-lg sm:text-xl">
         <p>
           Курс состоит из <strong>теоретического вебинара</strong>, видео с
           реальными младенцами, практики и упражнений для самостоятельного
@@ -107,7 +107,7 @@ const courses = [
   {
     title: 'Курс для родителей "Хендлинг 0 - 3 Месяца"',
     content: (
-      <div className="space-y-4 px-4 sm:px-10 py-4 text-lg sm:text-2xl">
+      <div className="space-y-4 px-4 sm:px-10 py-4 text-lg sm:text-xl">
         <p>
           Хотите научиться безопасно и комфортно носить ребенка на руках,
           успокаивать его без слез, позаботиться о его здоровье и своевременном
@@ -136,7 +136,7 @@ const courses = [
     title:
       'Курс для специалистов "Основы Хендлинга и Двигательной Терапии Для Детей"',
     content: (
-      <div className="space-y-4 px-4 sm:px-10 py-4 text-lg sm:text-2xl">
+      <div className="space-y-4 px-4 sm:px-10 py-4 text-lg sm:text-xl">
         <p className="font-semibold">Поздравляю, меня зовут Татьяна Труба!</p>
         <p>
           Приглашаю на авторский курс{" "}
@@ -198,16 +198,16 @@ export default function Courses() {
   };
   return (
     <div className="flex flex-col mx-auto text-justify">
-      <div className="text-3xl sm:text-4xl font-bold my-10 px-4 xl:px-40">
+      <h2 className="text-2xl sm:text-3xl font-bold my-10 px-4 xl:px-40">
         Курсы
-      </div>
+      </h2>
       {courses.map((course, index) => (
         <div
           key={index}
           className="transition all duration-300 ease-in-out overflow-x-hidden"
         >
           <button
-            className={`w-full text-left text-white text-2xl sm:text-4xl py-6 sm:py-10 px-4 xl:px-40 transition-all duration-300 ease-in-out
+            className={`w-full text-left text-white text-xl sm:text-2xl py-6 sm:py-10 px-4 xl:px-40 transition-all duration-300 ease-in-out
                         bg-gradient-to-r ${course.gradient} hover:brightness-120`}
             onClick={() => toggleCourse(index)}
           >
