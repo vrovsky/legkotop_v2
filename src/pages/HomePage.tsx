@@ -1,5 +1,3 @@
-import React from "react";
-
 import Header from "../components/Header.tsx";
 import Intro from "../components/Intro.tsx";
 import Cases from "../components/Cases.tsx";

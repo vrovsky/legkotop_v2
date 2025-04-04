@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
 import Cases from "../components/Cases.tsx";
@@ -176,7 +176,7 @@ export default function ParentsCorrectionCoursePage() {
         Вам точно нужен этот курс, если вы видите, что у ребенка
       </h2>
 
-      <div className="flex flex-col items-center lg:items-start lg:flex-row gap-20 justify-between mx-4 xl:mx-44">
+      <div className="flex flex-col items-center lg:items-start lg:flex-row gap-10 justify-between mx-4 xl:mx-44">
         {symptoms.map((item, index) => (
           <div key={index} className="flex flex-row gap-2">
             <CheckIcon />
@@ -257,7 +257,7 @@ export default function ParentsCorrectionCoursePage() {
       <Cases />
 
       <div className="px-4 xl:px-40 py-16 ">
-        <h2 className="text-3xl font-bold text-center mb-12">Тарифы</h2>
+        <h2 className="text-3xl font-bold text-center mb-4">Тарифы</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-4">
           {tariffs.map((tariff, index) => (
             <TariffCard key={index} {...tariff} />
@@ -274,7 +274,7 @@ export default function ParentsCorrectionCoursePage() {
             <div key={index} className="border-b border-gray-300">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left flex justify-between items-center text-lg xl:text-xl font-semibold p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition"
+                className="text-[#3c62c9] w-full text-left flex justify-between items-center text-lg xl:text-xl font-semibold p-4 bg-gray-100 rounded-lg hover:bg-gray-200 transition"
               >
                 {faq.question}
                 <span
@@ -290,9 +290,9 @@ export default function ParentsCorrectionCoursePage() {
                   openIndex === index ? "max-h-[1000px]" : "max-h-0"
                 }`}
               >
-                <div className="p-4 text-lg xl:text-xl text-semibold text-gray-700  text-justify">
+                <h1 className="p-4 text-lg xl:text-xl text-semibold text-gray-700  text-justify">
                   {faq.answer}
-                </div>
+                </h1>
               </div>
             </div>
           ))}

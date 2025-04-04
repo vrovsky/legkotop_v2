@@ -1,4 +1,3 @@
-import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,27 +7,27 @@ import arrowRight from "../assets/arrowRight.svg";
 const lectures = [
   {
     title: "Норма и отклонение от нормы в развитии детей 0-18 мес",
-    image: "../../public/lectures/lecture1.jpg",
+    image: "/lectures/lecture1.jpg",
   },
   {
     title: "Полезные и бесполезные девайсы",
-    image: "../../public/lectures/lecture2.jpg",
+    image: "/lectures/lecture2.jpg",
   },
   {
     title: "Нет опоры на ручки! Что делать?",
-    image: "../../public/lectures/lecture3.jpg",
+    image: "/lectures/lecture3.jpg",
   },
   {
     title: "Коррекция асимметрий у детей 0-10 мес",
-    image: "../../public/lectures/lecture4.jpg",
+    image: "/lectures/lecture4.jpg",
   },
   {
     title: "Сажать нельзя ждать",
-    image: "../../public/lectures/lecture5.jpg",
+    image: "/lectures/lecture5.jpg",
   },
   {
     title: "Первые шаги: до и после",
-    image: "../../public/lectures/lecture6.jpg",
+    image: "/lectures/lecture6.jpg",
   },
 ];
 
