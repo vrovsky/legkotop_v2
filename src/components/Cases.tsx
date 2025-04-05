@@ -44,12 +44,12 @@ export default function Cases() {
         <Slider {...settings}>
           {videos.map((video, index) => (
             <div key={index} className="px-2">
-              <div className="w-full h-[400px] md:h-[500px] lg:h-[640px] flex justify-center">
+              <div className="w-full h-[400px] md:h-[500px] lg:h-[560px] flex justify-center">
                 <video
                   src={video}
                   controls
                   playsInline
-                  className="rounded-lg max-w-full h-full object-cover"
+                  className="rounded-lg max-w-1xl lg:max-w-full h-full object-cover"
                 />
               </div>
             </div>
@@ -65,7 +65,7 @@ function CustomNextArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute right-[-45px] xl:right-[-45px] top-1/2 transform -translate-y-1/2  w-10 h-10 flex items-center rounded-full hover:bg-blue-200 transition ease-in-out duration-300"
+      className="absolute z-10 right-[10px] xl:right-[-45px] top-1/2 transform -translate-y-1/2  w-10 h-10 flex items-center rounded-full hover:bg-blue-200 transition ease-in-out duration-300"
     >
       <img src={arrowRight} className="w-20 h-20 " alt="arrow-right" />
     </button>
@@ -77,7 +77,7 @@ function CustomPrevArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute left-[-45px] xl:left-[-45spx] top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center rounded-full  hover:bg-blue-200 transition ease-in-out duration-300"
+      className="absolute z-10 left-[10px] xl:left-[-45px] top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center rounded-full  hover:bg-blue-200 transition ease-in-out duration-300"
     >
       <img
         src={arrowRight}

@@ -157,7 +157,7 @@ export default function ParrentsSittingCoursePage() {
     <>
       <Header />
       <div
-        className={`bg-amber-300 flex items-center flex-col-reverse gap-12 lg:flex-row py-20 px-4 lg:px-40 xl:px-60 justify-between transition-all duration-900 ease-out ${
+        className={`bg-amber-300 flex items-center flex-col-reverse gap-12 lg:flex-row pb-20 px-4 lg:py-20 lg:px-40 xl:px-60 justify-between transition-all duration-900 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
         }`}
       >
@@ -181,7 +181,7 @@ export default function ParrentsSittingCoursePage() {
             <img
               src={tatyana3}
               alt="Intro Pic"
-              className="rounded-4xl w-6xl max-w-sm md:max-w-md lg:max-w-full bg-amber-700"
+              className="rounded-4xl w-6xl md:max-w-md lg:max-w-full"
             />
           </div>
         </div>
@@ -204,14 +204,14 @@ export default function ParrentsSittingCoursePage() {
         <h2 className="text-3xl font-bold pb-8 ">
           Почему сидение это такой же важный навык, как и ползание?
         </h2>
-        <p className="text-lg font-bold  pb-10">
+        <p className="text-lg font-bold pb-10">
           На вебинаре с примерами и актуальными исследованиями разобрала, как и
           когда дети начинают сидеть — нормы и естественные сроки; признаки
           готовности малыша к самостоятельному сидению; почему ребёнок не
           садится — причины и пути решения
         </p>
         <iframe
-          className="w-full sm:w-3xl aspect-video rounded-4xl"
+          className="w-full lg:w-3xl aspect-video rounded-4xl"
           src="https://www.youtube.com/embed/FCU3SCULqnY?si=T4KIFvvdcT-u1lgq"
           title="YouTube video player"
           allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

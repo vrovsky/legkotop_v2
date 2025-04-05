@@ -167,7 +167,7 @@ export default function ParentsCorrectionCoursePage() {
             <img
               src={tatyana3}
               alt="Intro Pic"
-              className="rounded-4xl w-6xl max-w-sm md:max-w-md lg:max-w-full bg-amber-700"
+              className="rounded-4xl w-6xl md:max-w-md lg:max-w-full"
             />
           </div>
         </div>

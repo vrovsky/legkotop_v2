@@ -57,9 +57,11 @@ export default function ConsultationPage() {
         </div>
 
         <div className="text-center mt-6">
-          <Link to="/" className="text-blue-500 hover:underline">
-            ⬅ Вернуться на главную
-          </Link>
+          <button>
+            <Link to="/" className="text-blue-500 hover:underline">
+              ⬅ Вернуться на главную
+            </Link>
+          </button>
         </div>
       </div>
       <Footer />
