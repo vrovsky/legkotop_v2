@@ -161,9 +161,11 @@ export default function ParentsCorrectionCoursePage() {
       <Header />
 
       <div
-        className={` bg-amber-300  flex items-center flex-col-reverse gap-12 lg:flex-row py-10 px-4 lg:px-40 xl:px-20 justify-betweentransition-all duration-900 ease-out ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
-        }`}
+        className={` bg-amber-300  flex items-center flex-col gap-12 lg:flex-row 
+          py-10 px-4 lg:px-40 xl:px-20 justify-between 
+          transition-all duration-900 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+          }`}
       >
         <div className="flex xl:items-start flex-col">
           <h2 className="text-3xl font-bold ">

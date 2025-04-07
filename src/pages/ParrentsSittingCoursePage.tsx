@@ -4,7 +4,7 @@ import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
 import Cases from "../components/Cases.tsx";
 
-import tatyana3 from "../assets/tatyana3.png";
+import sittingCourseintro from "../assets/sittingCoursePage/sittingCourseIntro.png";
 import course1 from "../assets/sittingCourseBasic.png";
 import course2 from "../assets/sittingCourseCorrection.png";
 import course3 from "../assets/sittingCourseSupervision.png";
@@ -88,7 +88,7 @@ const tariffs = [
   },
   {
     title: "С сопровождением для родителей",
-    price: 70,
+    price: 100,
     features: [
       "Индивидуальное тестирование и определение причин, почему ваш ребенок не сидит самостоятельно",
       "Вебинар с теоретической базой",
@@ -157,9 +157,11 @@ export default function ParrentsSittingCoursePage() {
     <>
       <Header />
       <div
-        className={`bg-amber-300 flex items-center flex-col-reverse gap-12 lg:flex-row pb-20 px-4 lg:py-20 lg:px-40 xl:px-60 justify-between transition-all duration-900 ease-out ${
-          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
-        }`}
+        className={` bg-amber-300  flex items-center flex-col gap-12 lg:flex-row 
+          py-10 px-4 lg:px-40 xl:px-20 justify-between 
+          transition-all duration-900 ease-out ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
+          }`}
       >
         <div className="flex xl:items-start flex-col">
           <h2 className="text-3xl font-bold">Курс "Сажать нельзя ждать"</h2>
@@ -177,11 +179,11 @@ export default function ParrentsSittingCoursePage() {
           </button>
         </div>
         <div>
-          <div className="w-full max-w-sm lg:max-w-xl xl:max-w-3xl">
+          <div className="w-full max-w-sm lg:max-w-xl xl:max-w-5xl">
             <img
-              src={tatyana3}
+              src={sittingCourseintro}
               alt="Intro Pic"
-              className="rounded-4xl w-6xl md:max-w-md lg:max-w-full"
+              className="rounded-4xl w-6xl md:max-w-md lg:max-w-lg"
             />
           </div>
         </div>
