@@ -195,7 +195,7 @@ function CustomNextArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute right-[-15px] xl:right-[-45px] top-1/2 transform -translate-y-1/2  w-10 h-10 flex items-center rounded-full hover:bg-blue-200 transition ease-in-out duration-300"
+      className="absolute z-10 right-[-10px] xl:right-[-45px] top-1/2 transform -translate-y-1/2  w-10 h-10 flex items-center rounded-full hover:bg-blue-200 transition ease-in-out duration-300"
     >
       <img src={arrowRight} className="w-20 h-20 " alt="arrow-right" />
     </button>
@@ -207,7 +207,7 @@ function CustomPrevArrow(props) {
   return (
     <button
       onClick={onClick}
-      className="absolute left-[-15px] xl:left-[-45spx] top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center rounded-full  hover:bg-blue-200 transition ease-in-out duration-300"
+      className="absolute z-10 left-[-10px] xl:left-[-45px] top-1/2 transform -translate-y-1/2 w-10 h-10 flex items-center rounded-full  hover:bg-blue-200 transition ease-in-out duration-300"
     >
       <img
         src={arrowRight}

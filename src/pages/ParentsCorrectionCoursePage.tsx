@@ -3,7 +3,7 @@ import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
 import Cases from "../components/Cases.tsx";
 
-import tatyana3 from "../assets/tatyana3.png";
+import correctionHeader from "../assets/correctionCoursePage/correctionIntro.png";
 import course1 from "../assets/course1.png";
 import course2 from "../assets/course2.png";
 import course3 from "../assets/course3.png";
@@ -145,7 +145,7 @@ export default function ParentsCorrectionCoursePage() {
       <Header />
 
       <div
-        className={` bg-amber-300  flex items-center flex-col-reverse gap-12 lg:flex-row py-20 px-4 lg:px-40 xl:px-80 justify-betweentransition-all duration-900 ease-out ${
+        className={` bg-amber-300  flex items-center flex-col-reverse gap-12 lg:flex-row py-20 px-4 lg:px-40 xl:px-40 justify-betweentransition-all duration-900 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
         }`}
       >
@@ -165,7 +165,7 @@ export default function ParentsCorrectionCoursePage() {
         <div>
           <div className="w-full max-w-sm lg:max-w-xl xl:max-w-5xl">
             <img
-              src={tatyana3}
+              src={correctionHeader}
               alt="Intro Pic"
               className="rounded-4xl w-6xl md:max-w-md lg:max-w-full"
             />
@@ -209,17 +209,10 @@ export default function ParentsCorrectionCoursePage() {
       </div>
 
       <div className="flex flex-col m-4 p-8 gap-8 lg:flex-row justify-around">
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 p-4 max-w-2xl mx-auto">
-          <img
-            src={course1}
-            className="col-span-1 row-span-2 rounded-2xl shadow-xl"
-          />
-          <img src={course2} className="rounded-2xl shadow-xl" />
-          <div className="grid grid-cols-2 gap-4">
-            <img src={course3} className="rounded-2xl shadow-xl" />
-            <img src={course4} className="rounded-2xl shadow-xl" />
-          </div>
-        </div>
+        <img
+          src={course1}
+          className="col-span-1 row-span-2 rounded-2xl shadow-xl"
+        />
         <div className="pr-4 xl:pr-40 text-justify">
           <h2 className="text-xl sm:text-3xl text-start lg:text-justify font-bold ">
             Вы можете самостоятельно исправить асимметрию у своего ребенка!

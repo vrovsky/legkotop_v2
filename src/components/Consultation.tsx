@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-import tatyanaPhoto from "../assets/tatyana.png";
+import counslutationPhoto from "../assets/mainpage/consultation.png";
 
 export default function Consultation() {
   return (
     <div className=" text-justify flex flex-col lg:flex-row items-center bg-white p-4 sm:p-12 lg:px-16">
       <div className="w-full lg:w-1/3 flex justify-center mb-6 lg:mb-0">
         <img
-          src={tatyanaPhoto}
+          src={counslutationPhoto}
           alt="Татьяна Труба"
-          className="w-64 lg:w-80 object-contain brightness-110"
+          className="w-64 lg:w-auto lg:mr-10 object-contain brightness-110"
         />
       </div>
 
