@@ -4,10 +4,13 @@ import Footer from "../components/Footer.tsx";
 import Cases from "../components/Cases.tsx";
 
 import correctionHeader from "../assets/correctionCoursePage/correctionIntro.png";
-import course1 from "../assets/course1.png";
-import course2 from "../assets/course2.png";
-import course3 from "../assets/course3.png";
-import course4 from "../assets/course4.png";
+import correctionCollage1 from "../assets/correctionCoursePage/correctionCollage1.png";
+
+import course1 from "../assets/correctionCoursePage/correctionCourse1.png";
+import course2 from "../assets/correctionCoursePage/correctionCourse2.png";
+import course3 from "../assets/correctionCoursePage/correctionCourse3.png";
+import { href } from "react-router-dom";
+// import course4 from "../assets/course4.png";
 
 const CheckIcon = () => (
   <svg
@@ -27,20 +30,30 @@ const CheckIcon = () => (
   </svg>
 );
 
-const TariffCard = ({ title, price, features, image }) => (
-  <div className="flex flex-col items-center text-center justify-between rounded-3xl shadow-xl pb-4">
+const TariffCard = ({ title, price, features, image, href }) => (
+  <div className="flex flex-col items-center justify-between text-center rounded-3xl shadow-xl pb-4">
     <div className="flex flex-col items-center p-6 ">
-      <img className="w-56 h-56 mb-4 rounded-2xl" src={image} alt={title} />
-      <h2 className="text-xl font-bold pb-2 mb-4">{title}</h2>
-      <ul className="space-y-2 text-xl text-left text-gray-700 list-disc pl-4 pt-6 border-t-4 border-amber-300">
+      {/* w-72 if different */}
+      <img
+        className=" mb-4 rounded-2xl brightness-125"
+        src={image}
+        alt={title}
+      />
+      <h2 className="text-xl font-bold  pb-2 mb-4">{title}</h2>
+      <ul className="space-y-2 text-xl pl-4 text-justify text-gray-700 list-disc pt-6 border-t-4 border-amber-300">
         {features.map((feature, index) => (
           <li key={index}>{feature}</li>
         ))}
       </ul>
     </div>
-    <button className="mt-6 text-lg bg-amber-600 px-6 py-2 hover:bg-amber-500 text-white font-bold rounded-lg transition duration-300">
-      {price} EUR
-    </button>
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      <button
+        className="mt-6 text-lg bg-amber-600 px-6 py-2 hover:bg-amber-500 
+    text-white font-bold rounded-lg transition duration-300"
+      >
+        {price} EUR
+      </button>
+    </a>
   </div>
 );
 
@@ -73,10 +86,11 @@ const tariffs = [
       "Доступ навсегда",
     ],
     image: course1,
+    href: "https://secure.wayforpay.com/button/b48cfbe0748de",
   },
   {
     title: "С сопровождением для родителей",
-    price: 70,
+    price: 100,
     features: [
       "Индивидуальное тестирование и определение причин асимметрии вашего ребенка",
       "Вебинар с теоретической базой",
@@ -86,6 +100,7 @@ const tariffs = [
       "Обратная связь от Татьяна Трубы в течение 1 месяца",
     ],
     image: course2,
+    href: "https://secure.wayforpay.com/button/bfd9c33d05784",
   },
   {
     title: "Супервизия для специалистов",
@@ -99,6 +114,7 @@ const tariffs = [
       "Обратная связь от Татьяна Трубы в течение 3 месяцев",
     ],
     image: course3,
+    href: "https://secure.wayforpay.com/page?vkh=67f40135-51cc-4cb6-8834-252a22d1dba8",
   },
 ];
 
@@ -145,7 +161,7 @@ export default function ParentsCorrectionCoursePage() {
       <Header />
 
       <div
-        className={` bg-amber-300  flex items-center flex-col-reverse gap-12 lg:flex-row py-20 px-4 lg:px-40 xl:px-40 justify-betweentransition-all duration-900 ease-out ${
+        className={` bg-amber-300  flex items-center flex-col-reverse gap-12 lg:flex-row py-10 px-4 lg:px-40 xl:px-20 justify-betweentransition-all duration-900 ease-out ${
           isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"
         }`}
       >
@@ -209,10 +225,7 @@ export default function ParentsCorrectionCoursePage() {
       </div>
 
       <div className="flex flex-col m-4 p-8 gap-8 lg:flex-row justify-around">
-        <img
-          src={course1}
-          className="col-span-1 row-span-2 rounded-2xl shadow-xl"
-        />
+        <img src={correctionCollage1} className="w-xl rounded-2xl" />
         <div className="pr-4 xl:pr-40 text-justify">
           <h2 className="text-xl sm:text-3xl text-start lg:text-justify font-bold ">
             Вы можете самостоятельно исправить асимметрию у своего ребенка!
