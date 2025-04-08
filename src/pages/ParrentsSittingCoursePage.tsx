@@ -8,6 +8,8 @@ import sittingCourseintro from "../assets/sittingCoursePage/sittingCourseIntro.p
 import course1 from "../assets/sittingCourseBasic.png";
 import course2 from "../assets/sittingCourseCorrection.png";
 import course3 from "../assets/sittingCourseSupervision.png";
+import sittingCollage1 from "../assets/sittingCoursePage/sittingCollage2.png";
+
 import course4 from "../assets/course4.png";
 
 const TariffCard = ({ title, price, features, image, href }) => (
@@ -219,19 +221,9 @@ export default function ParrentsSittingCoursePage() {
           allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         ></iframe>
       </div>
-      <div className="text-justify flex flex-col m-4 p-8 gap-8 lg:flex-row justify-around">
-        <div className="grid grid-cols-2 grid-rows-2 gap-4 p-4 max-w-2xl mx-auto">
-          <img
-            src={course1}
-            className="col-span-1 row-span-2 rounded-2xl shadow-xl"
-          />
-          <img src={course2} className="rounded-2xl shadow-xl" />
-          <div className="grid grid-cols-2 gap-4">
-            <img src={course3} className="rounded-2xl shadow-xl" />
-            <img src={course4} className="rounded-2xl shadow-xl" />
-          </div>
-        </div>
-        <div className="pr-4 sm:pr-40">
+      <div className="text-justify flex flex-col mx-4 px-8 pb-10 gap-8 lg:flex-row-reverse justify-around">
+        <img src={sittingCollage1} className="md:h-[500px] rounded-2xl" />
+        <div className="pr-4 xl:pl-20">
           <h2 className="text-xl sm:text-3xl font-bold ">
             Сажать или ждать? Перестаньте волноваться и помогите своему ребенку
             освоить навык сидения без слез и истерик!

@@ -18,7 +18,7 @@ export default function Header() {
     <>
       <header
         className={`sticky top-0 bg-white z-40 shadow-md transition-all duration-300 ease-in-out ${
-          isScrolled ? "py-2" : "py-4"
+          isScrolled ? "py-1 opacity-90" : "py-4"
         }`}
       >
         <Link to="/" className="flex flex-row items-center">
