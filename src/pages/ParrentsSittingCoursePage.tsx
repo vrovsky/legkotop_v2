@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
@@ -143,6 +143,11 @@ const faqs = [
   },
 ];
 export default function ParrentsSittingCoursePage() {
+  const tariffRef = useRef<HTMLDivElement | null>(null);
+  const scrollToTariffs = () => {
+    tariffRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -176,7 +181,10 @@ export default function ParrentsSittingCoursePage() {
             девайсов и стрессов
           </p>
           <p className="text-xl mt-6">Авторская методика Татьяны Трубы</p>
-          <button className="text-xl bg-red-400 px-24 py-2 hover:bg-red-500 text-white transition-all duration-800 ease-in-out font-bold rounded mt-8">
+          <button
+            onClick={scrollToTariffs}
+            className="text-xl bg-red-400 px-24 py-2 hover:bg-red-500 text-white transition-all duration-800 ease-in-out font-bold rounded mt-8"
+          >
             Выбрать тариф
           </button>
         </div>
@@ -270,7 +278,7 @@ export default function ParrentsSittingCoursePage() {
       </div>
       {/* title="Результаты мам и малышей, которые прошли этот курс" */}
       <Cases />
-      <div className="px-4 xl:px-40 py-16">
+      <div ref={tariffRef} className="px-4 xl:px-40 py-16">
         <h2 className="text-3xl font-bold text-center mb-4">Тарифы</h2>
         <div className=" grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-4">
           {tariffs.map((tariff, index) => (

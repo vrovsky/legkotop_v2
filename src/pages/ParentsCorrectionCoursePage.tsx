@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Header from "../components/Header.tsx";
 import Footer from "../components/Footer.tsx";
 import Cases from "../components/Cases.tsx";
@@ -144,6 +144,11 @@ const faqs = [
 ];
 
 export default function ParentsCorrectionCoursePage() {
+  const tariffRef = useRef<HTMLDivElement | null>(null);
+  const scrollToTariffs = () => {
+    tariffRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -176,7 +181,10 @@ export default function ParentsCorrectionCoursePage() {
             жизни, чтобы обеспечить ему хорошую осанку в будущем
           </h1>
           <p className="text-xl mt-6">Авторская методика Татьяны Трубы</p>
-          <button className="text-xl bg-red-400 px-24 py-2 hover:bg-red-500 text-white transition-all duration-800 ease-in-out font-bold rounded mt-8">
+          <button
+            onClick={scrollToTariffs}
+            className="text-xl bg-red-400 px-24 py-2 hover:bg-red-500 text-white transition-all duration-800 ease-in-out font-bold rounded mt-8"
+          >
             Хочу на курс!
           </button>
         </div>
@@ -219,16 +227,19 @@ export default function ParentsCorrectionCoursePage() {
           className="w-full sm:w-3xl aspect-video rounded-4xl"
           src="https://www.youtube.com/embed/FCU3SCULqnY?si=T4KIFvvdcT-u1lgq"
           title="YouTube video player"
-          frameborder="0"
+          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
         ></iframe>
       </div>
 
-      <div className="flex flex-col m-4 p-8 gap-8 lg:flex-row justify-around">
-        <img src={correctionCollage1} className="w-xl rounded-2xl" />
-        <div className="pr-4 xl:pr-40 text-justify">
+      <div className="flex flex-col lg:ml-20 mx-4 lg:p-8 gap-8 lg:flex-row justify-around">
+        <img
+          src={correctionCollage1}
+          className="h-[600px] md:h-[800px] rounded-2xl"
+        />
+        <div className="pr-4 xl:pr-20 text-justify">
           <h2 className="text-xl sm:text-3xl text-start lg:text-justify font-bold ">
             Вы можете самостоятельно исправить асимметрию у своего ребенка!
           </h2>
@@ -256,15 +267,15 @@ export default function ParentsCorrectionCoursePage() {
             Для сложных случаев асимметрии на курсе предусмотрено{" "}
             <strong>окно обратной связи с ответами на вопросы</strong>.
           </p>
-          <button className="text-xl bg-red-400 px-24 py-2 hover:bg-red-500 text-white transition-all duration-800 ease-in-out font-bold rounded mt-8">
+          {/* <button className="text-xl bg-red-400 px-24 py-2 hover:bg-red-500 text-white transition-all duration-800 ease-in-out font-bold rounded mt-8">
             Выбрать тариф
-          </button>
+          </button> */}
         </div>
       </div>
 
       <Cases />
 
-      <div className="px-4 xl:px-40 py-16 ">
+      <div ref={tariffRef} className="px-4 xl:px-40 py-16 ">
         <h2 className="text-3xl font-bold text-center mb-4">Тарифы</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 sm:gap-4">
           {tariffs.map((tariff, index) => (
