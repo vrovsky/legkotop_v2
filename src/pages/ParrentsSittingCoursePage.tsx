@@ -230,7 +230,10 @@ export default function ParrentsSittingCoursePage() {
         ></iframe>
       </div>
       <div className="text-justify flex flex-col mx-4 px-8 pb-10 gap-8 lg:flex-row-reverse justify-around">
-        <img src={sittingCollage1} className="md:h-[500px] rounded-2xl" />
+        <img
+          src={sittingCollage1}
+          className="md:h-[500px] rounded-2xl brightness-95"
+        />
         <div className="pr-4 xl:pl-20">
           <h2 className="text-xl sm:text-3xl font-bold ">
             Сажать или ждать? Перестаньте волноваться и помогите своему ребенку

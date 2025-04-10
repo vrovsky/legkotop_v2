@@ -34,11 +34,7 @@ const TariffCard = ({ title, price, features, image, href }) => (
   <div className="flex flex-col items-center justify-between text-center rounded-3xl shadow-xl pb-4">
     <div className="flex flex-col items-center p-6 ">
       {/* w-72 if different */}
-      <img
-        className=" mb-4 rounded-2xl brightness-125"
-        src={image}
-        alt={title}
-      />
+      <img className=" mb-4 rounded-2xl contrast-125" src={image} alt={title} />
       <h2 className="text-xl font-bold  pb-2 mb-4">{title}</h2>
       <ul className="space-y-2 text-xl pl-4 text-justify text-gray-700 list-disc pt-6 border-t-4 border-amber-300">
         {features.map((feature, index) => (
@@ -179,6 +175,10 @@ export default function ParentsCorrectionCoursePage() {
           <h1 className="text-xl font-semibold mt-6 text-justify">
             Помогите своему ребенку активно и симметрично двигаться в первый год
             жизни, чтобы обеспечить ему хорошую осанку в будущем
+          </h1>
+          <h1 className="text-xl font-semibold mt-6 text-justify">
+            Научитесь поддерживать естественное развитие малыша без лишних
+            девайсов и стрессов
           </h1>
           <p className="text-xl mt-6">Авторская методика Татьяны Трубы</p>
           <button
