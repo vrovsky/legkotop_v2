@@ -8,10 +8,12 @@ const lectures = [
   {
     title: "Норма и отклонение от нормы в развитии детей 0-18 мес",
     image: "/lectures/lecture1.jpg",
+    href: "https://secure.wayforpay.com/button/b5b392568621a",
   },
   {
-    title: "Полезные и бесполезные девайсы",
+    title: "Полезные и вредные девайсы",
     image: "/lectures/lecture2.jpg",
+    href: "https://secure.wayforpay.com/button/bb0d4eb0dd5b3",
   },
   {
     title: "Нет опоры на ручки! Что делать?",
@@ -20,14 +22,17 @@ const lectures = [
   {
     title: "Коррекция асимметрий у детей 0-10 мес",
     image: "/lectures/lecture4.jpg",
+    href: "https://secure.wayforpay.com/button/b82a0ff2c0789",
   },
   {
     title: "Сажать нельзя ждать",
     image: "/lectures/lecture5.jpg",
+    href: "https://secure.wayforpay.com/button/ba0d97c352678",
   },
   {
     title: "Первые шаги: до и после",
     image: "/lectures/lecture6.jpg",
+    href: "https://secure.wayforpay.com/button/b7db4d7551271",
   },
 ];
 
@@ -68,15 +73,14 @@ export default function Lections() {
                 <img
                   src={lecture.image}
                   alt={lecture.title}
-                  className="w-full h-52 md:h-64 xl:h-76 object-cover rounded-3xl"
+                  className="w-full h-52 md:h-64 xl:h-76 object-cover rounded-t-3xl"
                 />
-                <div className="p-4 text-center">
-                  {/* <h3 className="text-lg font-semibold mb-2">
-                    {lecture.title}
-                  </h3> */}
-                  <button className="text-xl font-bold w-full rounded-xl h-11 bg-blue-400 text-white hover:bg-blue-500 transition ease-in-out duration-400">
-                    Купить
-                  </button>
+                <div className="text-center">
+                  <a href={lecture.href} target="_blank">
+                    <button className="text-xl font-bold w-full rounded-b-xl h-11 bg-blue-400 text-white hover:bg-blue-500 transition ease-in-out duration-400">
+                      Купить
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
