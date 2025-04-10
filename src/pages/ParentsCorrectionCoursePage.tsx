@@ -185,7 +185,7 @@ export default function ParentsCorrectionCoursePage() {
             onClick={scrollToTariffs}
             className="text-xl bg-red-400 px-24 py-2 hover:bg-red-500 text-white transition-all duration-800 ease-in-out font-bold rounded mt-8"
           >
-            Хочу на курс!
+            Выбрать тариф
           </button>
         </div>
         <div>
